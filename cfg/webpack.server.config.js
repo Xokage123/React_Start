@@ -23,7 +23,7 @@ module.exports = {
       use: {
         loader: 'ts-loader'
       }
-    }, { test: /\.css$/,
+    }, { test: /\.sass$/,
       use: [ {
         loader: 'css-loader',
         options: {
@@ -33,7 +33,9 @@ module.exports = {
           },
           onlyLocals: true,
         }
-      }]
+      },
+      'sass-loader' 
+    ]
     } ]
   },
   optimization: {

@@ -25,7 +25,7 @@ module.exports = {
       exclude: /node_modules/,
       use: ['ts-loader']
     },
-    { test: /\.css$/,
+    { test: /\.sass$/,
       use: ['style-loader', {
         loader: 'css-loader',
         options: {
@@ -35,7 +35,9 @@ module.exports = {
           }
 
         }
-      }]
+      }, 
+       'sass-loader',
+    ]
     }  
   ]
   },
