@@ -24,7 +24,20 @@ module.exports = {
       test: /\.[jt]sx?$/,
       exclude: /node_modules/,
       use: ['ts-loader']
-    }]
+    },
+    { test: /\.css$/,
+      use: ['style-loader', {
+        loader: 'css-loader',
+        options: {
+          modules: {
+            mode: 'local',
+            localIdentName: '[name]__[local]--[hash:base64:5]'
+          }
+
+        }
+      }]
+    }  
+  ]
   },
   devtool: setupDevtool()
 };
