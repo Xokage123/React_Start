@@ -1,0 +1,13 @@
+@import '../variables';
+
+.content {
+    background-color: $white;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 7px 7px 0 0;
+}
+@media (max-width: 1024px) {
+    .content {
+        padding: 0;
+    }
+}

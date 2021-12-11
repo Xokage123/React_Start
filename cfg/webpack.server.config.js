@@ -40,7 +40,7 @@ module.exports = {
     exclude: GLOBAL_SCSS_REGEXP
     },
     { test: GLOBAL_SCSS_REGEXP,
-      use: ['style-loader', 'css-loader']
+      use: ['css-loader', 'sass-loader']
     }
   ]
   },

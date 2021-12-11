@@ -42,7 +42,7 @@ module.exports = {
       exclude: GLOBAL_SCSS_REGEXP
     },
     { test: GLOBAL_SCSS_REGEXP,
-      use: ['css-loader']
+      use: ['style-loader','css-loader', 'sass-loader']
     }
   ]
   },
