@@ -3,6 +3,7 @@ const path = require('path');
 const NODE_ENV = process.env.NODE_ENV;
 const IS_DEV = NODE_ENV == 'development';
 const IS_PROD = NODE_ENV == 'production';
+const GLOBAL_SCSS_REGEXP = /\.global\.scss$/;
 
 function setupDevtool() {
   if(IS_DEV) return 'eval';
@@ -11,7 +12,7 @@ function setupDevtool() {
 
 module.exports = {
   resolve: {
-    extensions: ['.jsx', '.js','.json']
+    extensions: ['.js', '.jsx', '.ts','.tsx', 'scss', '.json']
   },
   mode: NODE_ENV ? NODE_ENV : 'development',
   entry: path.resolve(__dirname, '../src/client/index.jsx'),
@@ -25,7 +26,7 @@ module.exports = {
       exclude: /node_modules/,
       use: ['ts-loader']
     },
-    { test: /\.css$/,
+    { test: /\.scss$/,
       use: ['style-loader', {
         loader: 'css-loader',
         options: {
@@ -35,8 +36,14 @@ module.exports = {
           }
 
         }
-      }]
-    }  
+      }, 
+       'sass-loader',
+      ], 
+      exclude: GLOBAL_SCSS_REGEXP
+    },
+    { test: GLOBAL_SCSS_REGEXP,
+      use: ['style-loader','css-loader', 'sass-loader']
+    }
   ]
   },
   devtool: setupDevtool()
