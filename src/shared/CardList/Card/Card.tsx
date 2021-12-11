@@ -14,12 +14,40 @@ export function Card() {
        </div>
        <h2 className={styles.title}>
          <a href="#post-url" className={styles.postLink}>
-           Следует отметить, что новая модкель организационной деятельности</a>
+           Следует отметить, что новая модкель организационной деятельности Следует отметить, что новая модкель организационной деятельности</a>
        </h2>
      </div>
-     <div className={styles.preview}/>
-     <div className={styles.menu}/>
-     <div className={styles.controls}/>
+     <div className={styles.preview}>
+       <img className={styles.previewImg} src="https://cdn.dribbble.com/users/4125071/screenshots/17041619/media/c9ade589fb28a581b7ea7930fb1c887e.png?compress=1&resize=1200x900"/>
+     </div>
+     <div className={styles.menu}>
+       <button className={styles.menuButton}>
+        <img className={styles.menuButtonImg} src="https://www.pngrepo.com/download/75784/three-dots-menu.png"/>
+       </button>
+     </div>
+     <div className={styles.controls}>
+       <div className={styles.karmaCounter}>
+         <button className={styles.up}>
+           <img className={styles.upImg} src="https://ps.w.org/wpfront-scroll-top/assets/icon.svg?rev=1534312"/>
+         </button>
+         <span className={styles.karmaValue}>234</span>
+         <button className={styles.down}>
+           <img className={styles.downImg} src="https://ps.w.org/wpfront-scroll-top/assets/icon.svg?rev=1534312"/>
+         </button>
+       </div>
+       <button className={styles.commentsButton}>
+         <img src="https://cdn-icons-png.flaticon.com/512/1380/1380338.png" alt="" />
+         <span className={styles.commentsNumber}>13</span>
+       </button>
+       <div className={styles.actions}>
+         <button className={styles.shareButton}>
+           <img src="https://cdn0.iconfinder.com/data/icons/multimedia-261/32/Send-512.png" alt="" />
+         </button>
+         <button className={styles.saveButton}>
+           <img src="https://cdn.iconscout.com/icon/free/png-256/save-1659426-1408816.png"/>
+         </button>
+       </div>
+     </div>
    </li>
   );
 }
