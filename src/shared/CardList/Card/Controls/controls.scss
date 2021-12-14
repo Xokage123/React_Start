@@ -1,0 +1,65 @@
+@import '../../../variables';
+
+.controls {
+  padding: 5px 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.karmaCounter {
+ display: flex;
+ align-items: center; 
+}
+.karmaValue {
+  margin-bottom: 10px;
+  color: $greyC4;
+}
+.up {
+  width: 30px;
+  margin-right: 10px;
+}
+.down {
+  width: 30px;
+  margin-left: 10px;
+}
+.upImg {
+  width: 100%;
+}
+.downImg {
+  width: 100%;
+  transform: rotate(180deg);
+}
+.commentsButton {
+  display: flex;
+  align-items: normal;
+  width: 30px;
+  height: 30px;
+}
+.commentsButton img {
+  width: 30px;
+}
+.commentsButton * {
+  color: $greyC4;
+}
+.commentsNumber {
+  padding: 0 0 0 6px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.shareButton{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.shareButton img {
+  width: 30px;
+  height: 30px;
+}
+.saveButton {
+  width: 30px;
+  height: 30px;
+}
+.saveButton img {
+  width: 30px;
+  height: 30px;
+}
