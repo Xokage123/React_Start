@@ -10,6 +10,7 @@ import { CardList } from './CardList';
 export function App() {
    return (
      <Layout>
+       
        <Header />
        <Content>
          <CardList />
