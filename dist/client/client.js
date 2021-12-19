@@ -405,7 +405,7 @@ eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst Layout_1 = __webpack_require__(/*! ./Layout/Layout */ \"./src/shared/Layout/Layout.tsx\");\r\n__webpack_require__(/*! ./main.global.scss */ \"./src/shared/main.global.scss\");\r\nconst Header_1 = __webpack_require__(/*! ./Header */ \"./src/shared/Header/index.ts\");\r\nconst Content_1 = __webpack_require__(/*! ./Content */ \"./src/shared/Content/index.ts\");\r\nconst CardList_1 = __webpack_require__(/*! ./CardList */ \"./src/shared/CardList/index.ts\");\r\nfunction App() {\r\n    return (react_1.default.createElement(Layout_1.Layout, null,\r\n        react_1.default.createElement(Header_1.Header, null),\r\n        react_1.default.createElement(Content_1.Content, null,\r\n            react_1.default.createElement(CardList_1.CardList, null))));\r\n}\r\nexports.App = App;\r\n\n\n//# sourceURL=webpack:///./src/shared/App.tsx?");
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst Layout_1 = __webpack_require__(/*! ./Layout/Layout */ \"./src/shared/Layout/Layout.tsx\");\r\n__webpack_require__(/*! ./main.global.scss */ \"./src/shared/main.global.scss\");\r\nconst Header_1 = __webpack_require__(/*! ./Header */ \"./src/shared/Header/index.ts\");\r\nconst Content_1 = __webpack_require__(/*! ./Content */ \"./src/shared/Content/index.ts\");\r\nconst CardList_1 = __webpack_require__(/*! ./CardList */ \"./src/shared/CardList/index.ts\");\r\nconst Function_1 = __webpack_require__(/*! ./Function */ \"./src/shared/Function.tsx\");\r\nconst generateRandomIndex_1 = __webpack_require__(/*! ./utils/React/generateRandomIndex */ \"./src/shared/utils/React/generateRandomIndex.ts\");\r\nconst merge_1 = __webpack_require__(/*! ./utils/JS/merge */ \"./src/shared/utils/JS/merge.ts\");\r\nconst LIST = [\r\n    { title: 'Audio' },\r\n    { title: 'Bio' },\r\n    { title: 'Ali' },\r\n].map(generateRandomIndex_1.generateId);\r\nfunction App() {\r\n    const [list, setList] = React.useState(LIST);\r\n    // const [isMounted] = useIsMounted()\r\n    // // React.useEffect(() => {console.log('isMounted')},[isMounted])\r\n    const itemDelete = (id) => {\r\n        setList(list.filter(item => { if (item.id === id)\r\n            return false; }));\r\n    };\r\n    React.useEffect(() => {\r\n        console.log('asdasd');\r\n    });\r\n    const handleClick = (id) => {\r\n        console.log(id);\r\n    };\r\n    return (React.createElement(Layout_1.Layout, null,\r\n        React.createElement(Function_1.Feed, { blocks: LIST.map(merge_1.merge({ onClick: itemDelete })) }),\r\n        React.createElement(Header_1.Header, null),\r\n        React.createElement(Content_1.Content, null,\r\n            React.createElement(CardList_1.CardList, null))));\r\n}\r\nexports.App = App;\r\n\n\n//# sourceURL=webpack:///./src/shared/App.tsx?");
 
 /***/ }),
 
@@ -661,6 +661,18 @@ eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProp
 
 /***/ }),
 
+/***/ "./src/shared/Function.tsx":
+/*!*********************************!*\
+  !*** ./src/shared/Function.tsx ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst withKey_1 = __webpack_require__(/*! ./utils/React/withKey */ \"./src/shared/utils/React/withKey.tsx\");\r\nfunction Feed(props) {\r\n    return (React.createElement(\"div\", null, props.blocks.map(withKey_1.withIdKey(Block))));\r\n}\r\nexports.Feed = Feed;\r\nfunction Block(props) {\r\n    return (React.createElement(\"div\", { onClick: () => props.onClick(props.id) },\r\n        \"  \",\r\n        props.title));\r\n}\r\nexports.Block = Block;\r\n\n\n//# sourceURL=webpack:///./src/shared/Function.tsx?");
+
+/***/ }),
+
 /***/ "./src/shared/Header/Header.tsx":
 /*!**************************************!*\
   !*** ./src/shared/Header/Header.tsx ***!
@@ -838,6 +850,54 @@ eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod)
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_global_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./main.global.scss */ \"./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/shared/main.global.scss\");\n/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_global_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_global_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n            \n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_global_scss__WEBPACK_IMPORTED_MODULE_1___default.a, options);\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_global_scss__WEBPACK_IMPORTED_MODULE_1___default.a.locals || {});\n\n//# sourceURL=webpack:///./src/shared/main.global.scss?");
+
+/***/ }),
+
+/***/ "./src/shared/utils/JS/assoc.ts":
+/*!**************************************!*\
+  !*** ./src/shared/utils/JS/assoc.ts ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nfunction assoc(key, value) {\r\n    return (obj) => (Object.assign(Object.assign({}, obj), { [key]: value }));\r\n}\r\nexports.assoc = assoc;\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/JS/assoc.ts?");
+
+/***/ }),
+
+/***/ "./src/shared/utils/JS/merge.ts":
+/*!**************************************!*\
+  !*** ./src/shared/utils/JS/merge.ts ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nfunction merge(obj) {\r\n    return (obj2) => (Object.assign(Object.assign({}, obj), obj2));\r\n}\r\nexports.merge = merge;\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/JS/merge.ts?");
+
+/***/ }),
+
+/***/ "./src/shared/utils/React/generateRandomIndex.ts":
+/*!*******************************************************!*\
+  !*** ./src/shared/utils/React/generateRandomIndex.ts ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst assoc_1 = __webpack_require__(/*! ../JS/assoc */ \"./src/shared/utils/JS/assoc.ts\");\r\nexports.generateRandomString = () => Math.random().toString(36).substring(2, 15);\r\nexports.assignId = assoc_1.assoc('id', exports.generateRandomString());\r\nexports.generateId = (obj) => assoc_1.assoc('id', exports.generateRandomString())(obj);\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/React/generateRandomIndex.ts?");
+
+/***/ }),
+
+/***/ "./src/shared/utils/React/withKey.tsx":
+/*!********************************************!*\
+  !*** ./src/shared/utils/React/withKey.tsx ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nexports.withIdKey = withKey('id');\r\nfunction withKey(key) {\r\n    return (component) => (props, index) => react_1.default.createElement(component, Object.assign(Object.assign({}, props), { key: key ? props[key] : index }), []);\r\n}\r\nexports.withKey = withKey;\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/React/withKey.tsx?");
 
 /***/ })
 

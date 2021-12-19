@@ -1,15 +1,16 @@
- import { pickFromSyntheticEvent } from './utils/React/pickFromSyntheticEvent';
+import * as React from 'react';
+import { pickFromSyntheticEvent } from './utils/React/pickFromSyntheticEvent';
 import { withKey } from './utils/React/withKey';
-import React from 'react';
+import { withIdKey } from './utils/React/withKey'
  
  export interface IBlockProps {
      title: string;
      id: string;
+     onClick: (id: string) => void
  }
 
- const withIdKey = withKey('id');
 
- function Feed(props: {blocks: IBlockProps[] }) {
+ export function Feed(props: {blocks: IBlockProps[] }) {
      return (
          <div>
              {props.blocks.map(withIdKey(Block))}
@@ -17,10 +18,13 @@ import React from 'react';
      );
  }
 
- function Block(props: IBlockProps) {
+ export function Block(props: IBlockProps) {
      return (
-         <div>{props.title}</div>
+         <div onClick={() => props.onClick(props.id)}>  {props.title}</div>
      )
  }
 
+
+
+ 
 

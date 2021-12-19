@@ -1,3 +1,4 @@
+import React from 'react';
 import express from 'express';
 import ReactDOM from 'react-dom/server';
 import { App } from '../shared/App'
@@ -9,7 +10,7 @@ app.use('/static', express.static('./dist/client'));
 
 app.get('/', (req, res) => {
   res.send(
-    indexTemplate(ReactDOM.renderToString(App())),
+    indexTemplate(ReactDOM.renderToString(<App/>)),
   );
 });
 
