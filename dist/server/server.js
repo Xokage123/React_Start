@@ -130,7 +130,7 @@ eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod)
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nconst Layout_1 = __webpack_require__(/*! ./Layout/Layout */ \"./src/shared/Layout/Layout.tsx\");\r\n__webpack_require__(/*! ./main.global.scss */ \"./src/shared/main.global.scss\");\r\nconst Header_1 = __webpack_require__(/*! ./Header */ \"./src/shared/Header/index.ts\");\r\nconst Content_1 = __webpack_require__(/*! ./Content */ \"./src/shared/Content/index.ts\");\r\nconst CardList_1 = __webpack_require__(/*! ./CardList */ \"./src/shared/CardList/index.ts\");\r\nconst Function_1 = __webpack_require__(/*! ./Function */ \"./src/shared/Function.tsx\");\r\nconst generateRandomIndex_1 = __webpack_require__(/*! ./utils/React/generateRandomIndex */ \"./src/shared/utils/React/generateRandomIndex.ts\");\r\nconst merge_1 = __webpack_require__(/*! ./utils/JS/merge */ \"./src/shared/utils/JS/merge.ts\");\r\nconst LIST = [\r\n    { title: 'Audio' },\r\n    { title: 'Bio' },\r\n    { title: 'Ali' },\r\n].map(generateRandomIndex_1.generateId);\r\nfunction App() {\r\n    const [list, setList] = React.useState(LIST);\r\n    // const [isMounted] = useIsMounted()\r\n    // // React.useEffect(() => {console.log('isMounted')},[isMounted])\r\n    const itemDelete = (id) => {\r\n        setList(list.filter(item => { if (item.id === id)\r\n            return false; }));\r\n    };\r\n    React.useEffect(() => {\r\n        console.log('asdasd');\r\n    });\r\n    const handleClick = (id) => {\r\n        console.log(id);\r\n    };\r\n    return (React.createElement(Layout_1.Layout, null,\r\n        React.createElement(Function_1.Feed, { blocks: LIST.map(merge_1.merge({ onClick: itemDelete })) }),\r\n        React.createElement(Header_1.Header, null),\r\n        React.createElement(Content_1.Content, null,\r\n            React.createElement(CardList_1.CardList, null))));\r\n}\r\nexports.App = App;\r\n\n\n//# sourceURL=webpack:///./src/shared/App.tsx?");
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nconst Layout_1 = __webpack_require__(/*! ./Layout/Layout */ \"./src/shared/Layout/Layout.tsx\");\r\n__webpack_require__(/*! ./main.global.scss */ \"./src/shared/main.global.scss\");\r\nconst Header_1 = __webpack_require__(/*! ./Header */ \"./src/shared/Header/index.ts\");\r\nconst Content_1 = __webpack_require__(/*! ./Content */ \"./src/shared/Content/index.ts\");\r\nconst CardList_1 = __webpack_require__(/*! ./CardList */ \"./src/shared/CardList/index.ts\");\r\nconst Function_1 = __webpack_require__(/*! ./Function */ \"./src/shared/Function.tsx\");\r\nconst generateRandomIndex_1 = __webpack_require__(/*! ./utils/React/generateRandomIndex */ \"./src/shared/utils/React/generateRandomIndex.ts\");\r\nconst merge_1 = __webpack_require__(/*! ./utils/JS/merge */ \"./src/shared/utils/JS/merge.ts\");\r\nconst useIsMuonted_1 = __webpack_require__(/*! ./utils/React/useIsMuonted */ \"./src/shared/utils/React/useIsMuonted.tsx\");\r\nconst Dropdown_1 = __webpack_require__(/*! ./Dropdown */ \"./src/shared/Dropdown/index.ts\");\r\nlet LIST = [\r\n    { title: 'Audio' },\r\n    { title: 'Bio' },\r\n    { title: 'Ali' },\r\n].map(generateRandomIndex_1.generateId);\r\nfunction App() {\r\n    const [list, setList] = React.useState(LIST);\r\n    const [isMounted] = useIsMuonted_1.useIsMounted();\r\n    const itemDelete = (id) => {\r\n        setList(list.filter((item) => item.id !== id));\r\n    };\r\n    const addItem = () => {\r\n        setList(list.concat(generateRandomIndex_1.generateId({ title: generateRandomIndex_1.generateRandomString() })));\r\n    };\r\n    return (React.createElement(Layout_1.Layout, null,\r\n        React.createElement(Function_1.Feed, { blocks: list.map(merge_1.merge({ onClick: itemDelete })) }),\r\n        React.createElement(\"button\", { onClick: addItem }, \"Add me\"),\r\n        React.createElement(Header_1.Header, null),\r\n        React.createElement(Content_1.Content, null,\r\n            React.createElement(CardList_1.CardList, null),\r\n            React.createElement(\"div\", { style: { padding: 20 } },\r\n                React.createElement(Dropdown_1.Dropdown, { button: React.createElement(\"button\", null, \"Test\") },\r\n                    React.createElement(\"ul\", null,\r\n                        React.createElement(\"li\", null, \"122\")))))));\r\n}\r\nexports.App = App;\r\n\n\n//# sourceURL=webpack:///./src/shared/App.tsx?");
 
 /***/ }),
 
@@ -379,6 +379,41 @@ eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProp
 
 /***/ }),
 
+/***/ "./src/shared/Dropdown/Dropdown.tsx":
+/*!******************************************!*\
+  !*** ./src/shared/Dropdown/Dropdown.tsx ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst dropdown_scss_1 = __importDefault(__webpack_require__(/*! ./dropdown.scss */ \"./src/shared/Dropdown/dropdown.scss\"));\r\nconst NOOP = () => { };\r\nfunction Dropdown({ button, children, isOpen, onOpen = NOOP, onClose = NOOP }) {\r\n    const [isDropdownOpen, setIsDropdownOpen] = react_1.default.useState(isOpen);\r\n    react_1.default.useEffect(() => setIsDropdownOpen(isOpen), [isOpen]);\r\n    react_1.default.useEffect(() => isDropdownOpen ? onOpen() : onClose(), [isDropdownOpen]);\r\n    const handleOpen = () => {\r\n        if (isOpen == undefined) {\r\n            setIsDropdownOpen(!isDropdownOpen);\r\n        }\r\n    };\r\n    return (react_1.default.createElement(\"div\", { className: dropdown_scss_1.default.container },\r\n        react_1.default.createElement(\"div\", { onClick: () => handleOpen }, button),\r\n        isDropdownOpen && (react_1.default.createElement(\"div\", { className: dropdown_scss_1.default.listContainer },\r\n            react_1.default.createElement(\"div\", { className: dropdown_scss_1.default.list, onClick: () => setIsDropdownOpen(false) }, children)))));\r\n}\r\nexports.Dropdown = Dropdown;\r\n\n\n//# sourceURL=webpack:///./src/shared/Dropdown/Dropdown.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/Dropdown/dropdown.scss":
+/*!*******************************************!*\
+  !*** ./src/shared/Dropdown/dropdown.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"container\": \"dropdown__container--o1mMR\",\n\t\"listContainer\": \"dropdown__listContainer--3nCwY\",\n\t\"list\": \"dropdown__list--1nfRv\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/Dropdown/dropdown.scss?");
+
+/***/ }),
+
+/***/ "./src/shared/Dropdown/index.ts":
+/*!**************************************!*\
+  !*** ./src/shared/Dropdown/index.ts ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\r\n}\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\n__export(__webpack_require__(/*! ./Dropdown */ \"./src/shared/Dropdown/Dropdown.tsx\"));\r\n\n\n//# sourceURL=webpack:///./src/shared/Dropdown/index.ts?");
+
+/***/ }),
+
 /***/ "./src/shared/Function.tsx":
 /*!*********************************!*\
   !*** ./src/shared/Function.tsx ***!
@@ -598,6 +633,18 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nfu
 
 "use strict";
 eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst assoc_1 = __webpack_require__(/*! ../JS/assoc */ \"./src/shared/utils/JS/assoc.ts\");\r\nexports.generateRandomString = () => Math.random().toString(36).substring(2, 15);\r\nexports.assignId = assoc_1.assoc('id', exports.generateRandomString());\r\nexports.generateId = (obj) => assoc_1.assoc('id', exports.generateRandomString())(obj);\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/React/generateRandomIndex.ts?");
+
+/***/ }),
+
+/***/ "./src/shared/utils/React/useIsMuonted.tsx":
+/*!*************************************************!*\
+  !*** ./src/shared/utils/React/useIsMuonted.tsx ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nfunction useIsMounted() {\r\n    const [isMounted, setIsMounted] = React.useState(false);\r\n    React.useEffect(() => { setIsMounted(true); }, []);\r\n    return [isMounted];\r\n}\r\nexports.useIsMounted = useIsMounted;\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/React/useIsMuonted.tsx?");
 
 /***/ }),
 
