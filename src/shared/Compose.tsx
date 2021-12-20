@@ -12,7 +12,7 @@ function InputExample({ value, onChange}: any) {
   )
 }
 
-const function Compose<U> (...fns: Function[]) {
+function Compose<U> (...fns: Function[]) {
   return <E, >(initialValue: any): U => 
    fns.reduceRight((previousValue, fn) => fn(previousValue), initialValue);
 }
