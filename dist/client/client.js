@@ -115,7 +115,7 @@ eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".menu__menu--3ALMa {\\n  position: absolute;\\n  top: 0px;\\n  right: 10px;\\n}\\n\\n.menu__menuButtom--1U-B8 {\\n  width: 50px;\\n  height: 50px;\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  transform: rotate(90deg);\\n  border-radius: 31px;\\n  background: transparent;\\n  border: 0;\\n}\\n\\n.menu__menuButtonImg--3HAVq {\\n  padding: 5px;\\n  width: 31px;\\n  height: 31px;\\n  border-radius: 31px;\\n  border-radius: 31px;\\n  background: transparent;\\n}\\n\\n.menu__menuButtonImg--3HAVq:active, .menu__menuButtomImg--3UWil:hover {\\n  background-color: rgba(51, 51, 51, 0.1);\\n}\\n\\n.menu__icon-premium--1pEAN {\\n  box-sizing: border-box;\\n  padding: 10px 10px;\\n}\\n.menu__icon-premium--1pEAN:hover {\\n  background-color: #b6b6b6;\\n}\", \"\"]);\n// Exports\nexports.locals = {\n\t\"menu\": \"menu__menu--3ALMa\",\n\t\"menuButtom\": \"menu__menuButtom--1U-B8\",\n\t\"menuButtonImg\": \"menu__menuButtonImg--3HAVq\",\n\t\"menuButtomImg\": \"menu__menuButtomImg--3UWil\",\n\t\"icon-premium\": \"menu__icon-premium--1pEAN\"\n};\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Menu/menu.scss?./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/sass-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".menu__menu--3ALMa {\\n  position: absolute;\\n  top: 0px;\\n  right: 10px;\\n}\\n\\n.menu__menuButtom--1U-B8 {\\n  width: 50px;\\n  height: 50px;\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  transform: rotate(90deg);\\n  border-radius: 31px;\\n  background: transparent;\\n  border: 0;\\n}\\n\\n.menu__menuButtonImg--3HAVq {\\n  padding: 5px;\\n  width: 31px;\\n  height: 31px;\\n  border-radius: 31px;\\n  border-radius: 31px;\\n  background: transparent;\\n}\\n\\n.menu__menuButtonImg--3HAVq:active, .menu__menuButtomImg--3UWil:hover {\\n  background-color: rgba(51, 51, 51, 0.1);\\n}\\n\\n.menu__dropDown--33ilJ {\\n  position: absolute;\\n  right: 0;\\n  top: 10px;\\n  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\\n  border-radius: 3px;\\n  background-color: #ffffff;\\n}\", \"\"]);\n// Exports\nexports.locals = {\n\t\"menu\": \"menu__menu--3ALMa\",\n\t\"menuButtom\": \"menu__menuButtom--1U-B8\",\n\t\"menuButtonImg\": \"menu__menuButtonImg--3HAVq\",\n\t\"menuButtomImg\": \"menu__menuButtomImg--3UWil\",\n\t\"dropDown\": \"menu__dropDown--33ilJ\"\n};\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Menu/menu.scss?./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -476,7 +476,7 @@ eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProp
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst Dropdown_1 = __webpack_require__(/*! ../../../Dropdown */ \"./src/shared/Dropdown/index.ts\");\r\nconst List_1 = __webpack_require__(/*! ../../../Header/SortBlock/List */ \"./src/shared/Header/SortBlock/List.tsx\");\r\nconst generateRandomIndex_1 = __webpack_require__(/*! ../../../utils/React/generateRandomIndex */ \"./src/shared/utils/React/generateRandomIndex.ts\");\r\nconst merge_1 = __webpack_require__(/*! ../../../utils/js/merge */ \"./src/shared/utils/js/merge.ts\");\r\nconst menu_scss_1 = __importDefault(__webpack_require__(/*! ./menu.scss */ \"./src/shared/CardList/Card/Menu/menu.scss\"));\r\nconst LIST = [\r\n    { title: 'Rising', class: 'dropItem' },\r\n    { title: 'Powerups', class: 'icon-powerup' },\r\n    { title: 'Premium', class: 'icon-premium' },\r\n    { title: 'Talk', class: 'dropItem' },\r\n    { title: 'Predictions', class: 'dropItem' },\r\n    { title: 'Help Center', class: 'icon-help' },\r\n].map(generateRandomIndex_1.generateId);\r\nfunction Menu() {\r\n    const [mainButton, setMainButton] = react_1.default.useState('Rising');\r\n    const handleClick = (id) => {\r\n        const newList = LIST.filter((item) => item.id == id);\r\n        const [newItem] = newList;\r\n        setMainButton(newItem.title);\r\n    };\r\n    return (react_1.default.createElement(\"div\", { className: menu_scss_1.default.menu },\r\n        react_1.default.createElement(Dropdown_1.Dropdown, { button: react_1.default.createElement(\"button\", { className: menu_scss_1.default.menuButton },\r\n                react_1.default.createElement(\"img\", { className: menu_scss_1.default.menuButtonImg, src: \"https://www.pngrepo.com/download/75784/three-dots-menu.png\" })) },\r\n            react_1.default.createElement(List_1.Feed, { blocks: LIST.map(merge_1.merge({ onClick: handleClick })) }))));\r\n}\r\nexports.Menu = Menu;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Menu/Menu.tsx?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst Dropdown_1 = __webpack_require__(/*! ../../../Dropdown */ \"./src/shared/Dropdown/index.ts\");\r\nconst generateRandomIndex_1 = __webpack_require__(/*! ../../../utils/React/generateRandomIndex */ \"./src/shared/utils/React/generateRandomIndex.ts\");\r\nconst menu_scss_1 = __importDefault(__webpack_require__(/*! ./menu.scss */ \"./src/shared/CardList/Card/Menu/menu.scss\"));\r\nconst MenuIcon_1 = __webpack_require__(/*! ../../../Icons/MenuIcon */ \"./src/shared/Icons/MenuIcon.tsx\");\r\nconst LIST = [\r\n    { title: 'Rising', class: 'dropItem' },\r\n    { title: 'Powerups', class: 'icon-powerup' },\r\n    { title: 'Premium', class: 'icon-premium' },\r\n    { title: 'Talk', class: 'dropItem' },\r\n    { title: 'Predictions', class: 'dropItem' },\r\n    { title: 'Help Center', class: '' },\r\n].map(generateRandomIndex_1.generateId);\r\nfunction Menu() {\r\n    const [mainButton, setMainButton] = react_1.default.useState('Rising');\r\n    const handleClick = (id) => {\r\n        const newList = LIST.filter((item) => item.id == id);\r\n        const [newItem] = newList;\r\n        setMainButton(newItem.title);\r\n    };\r\n    return (react_1.default.createElement(\"div\", { className: menu_scss_1.default.menu },\r\n        react_1.default.createElement(Dropdown_1.Dropdown, { button: react_1.default.createElement(\"button\", { className: menu_scss_1.default.menuButton },\r\n                react_1.default.createElement(MenuIcon_1.MenuIcon, null)) },\r\n            react_1.default.createElement(\"div\", { className: menu_scss_1.default.dropDown }, \"Rising Powerups Premium\"))));\r\n}\r\nexports.Menu = Menu;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Menu/Menu.tsx?");
 
 /***/ }),
 
@@ -864,6 +864,18 @@ eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProp
 
 /***/ }),
 
+/***/ "./src/shared/Icons/MenuIcon.tsx":
+/*!***************************************!*\
+  !*** ./src/shared/Icons/MenuIcon.tsx ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nfunction MenuIcon() {\r\n    return (React.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", width: \"20\", height: \"5\", viewBox: \"0 0 20 5\", fill: \"none\" },\r\n        React.createElement(\"circle\", { cx: \"17.5\", cy: \"2.5\", r: \"2.5\", transform: \"rotate(90 17.5 2.5)\", fill: \"#D9D9D9\" }),\r\n        React.createElement(\"circle\", { cx: \"10\", cy: \"2.5\", r: \"2.5\", transform: \"rotate(90 10 2.5)\", fill: \"#D9D9D9\" }),\r\n        React.createElement(\"circle\", { cx: \"2.5\", cy: \"2.5\", r: \"2.5\", transform: \"rotate(90 2.5 2.5)\", fill: \"#D9D9D9\" })));\r\n}\r\nexports.MenuIcon = MenuIcon;\r\n\n\n//# sourceURL=webpack:///./src/shared/Icons/MenuIcon.tsx?");
+
+/***/ }),
+
 /***/ "./src/shared/Layout/Layout.scss":
 /*!***************************************!*\
   !*** ./src/shared/Layout/Layout.scss ***!
@@ -900,18 +912,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 /***/ }),
 
-/***/ "./src/shared/utils/JS/assoc.ts":
-/*!**************************************!*\
-  !*** ./src/shared/utils/JS/assoc.ts ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nfunction assoc(key, value) {\r\n    return (obj) => (Object.assign(Object.assign({}, obj), { [key]: value }));\r\n}\r\nexports.assoc = assoc;\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/JS/assoc.ts?");
-
-/***/ }),
-
 /***/ "./src/shared/utils/React/generateRandomIndex.ts":
 /*!*******************************************************!*\
   !*** ./src/shared/utils/React/generateRandomIndex.ts ***!
@@ -920,7 +920,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nfu
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst assoc_1 = __webpack_require__(/*! ../JS/assoc */ \"./src/shared/utils/JS/assoc.ts\");\r\nexports.generateRandomString = () => Math.random().toString(36).substring(2, 15);\r\nexports.assignId = assoc_1.assoc('id', exports.generateRandomString());\r\nexports.generateId = (obj) => assoc_1.assoc('id', exports.generateRandomString())(obj);\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/React/generateRandomIndex.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst assoc_1 = __webpack_require__(/*! ../js/assoc */ \"./src/shared/utils/js/assoc.ts\");\r\nexports.generateRandomString = () => Math.random().toString(36).substring(2, 15);\r\nexports.assignId = assoc_1.assoc('id', exports.generateRandomString());\r\nexports.generateId = (obj) => assoc_1.assoc('id', exports.generateRandomString())(obj);\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/React/generateRandomIndex.ts?");
 
 /***/ }),
 
@@ -933,6 +933,18 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nco
 
 "use strict";
 eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nexports.withIdKey = withKey('id');\r\nfunction withKey(key) {\r\n    return (component) => (props, index) => react_1.default.createElement(component, Object.assign(Object.assign({}, props), { key: key ? props[key] : index }), []);\r\n}\r\nexports.withKey = withKey;\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/React/withKey.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/utils/js/assoc.ts":
+/*!**************************************!*\
+  !*** ./src/shared/utils/js/assoc.ts ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nfunction assoc(key, value) {\r\n    return (obj) => (Object.assign(Object.assign({}, obj), { [key]: value }));\r\n}\r\nexports.assoc = assoc;\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/js/assoc.ts?");
 
 /***/ }),
 
