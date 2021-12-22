@@ -14,3 +14,59 @@
         border-radius: 0;
     }
 }
+
+.dropList {
+    position: relative;
+    box-sizing: border-box;
+    height: fit-content;
+    width: fit-content;
+    background-color: $white;
+    background-color: $white;
+    border-radius: 7px;
+    z-index: 5;
+}
+
+.dropItem {
+    box-sizing: border-box;
+    padding: 10px 10px;
+    &:hover{
+        background-color: rgb(182, 182, 182);
+    }
+}
+.icon-premium {
+    box-sizing: border-box;
+    padding: 10px 10px;
+    &:hover{
+        background-color: rgb(182, 182, 182);
+    }
+  }
+.icon-powerup {
+    box-sizing: border-box;
+    padding: 10px 10px;
+    &:hover{
+        background-color: rgb(182, 182, 182);
+    }
+  }
+  .icon-help {
+    box-sizing: border-box;
+    padding: 10px 10px;
+    &:hover{
+        background-color: rgb(182, 182, 182);
+    }
+  }
+  .icon-premium::before {
+    content: '<';
+    margin-right: 2px;
+  }
+  .icon-powerup::before {
+    content: '>';
+    margin-right: 2px;
+  }
+  .icon-help::before {
+    content: '?';
+    margin-right: 2px;
+  }
+  .list {
+      top: -50px
+  }
+  

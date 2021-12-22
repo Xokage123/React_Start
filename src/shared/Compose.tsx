@@ -12,7 +12,12 @@ function InputExample({ value, onChange}: any) {
   )
 }
 
-function Compose<U> (...fns: Function[]) {
+function compose<U> (...fns: Function[]) {
   return <E, >(initialValue: any): U => 
    fns.reduceRight((previousValue, fn) => fn(previousValue), initialValue);
 }
+
+function pipe<U> (...fns: Function[]) {
+  return <E, >(initialValue: any): U => 
+  fns.reduce((previousValue, fn) => fn(previousValue), initialValue); 
+} 

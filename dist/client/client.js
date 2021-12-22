@@ -115,7 +115,7 @@ eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".menu__menu--3ALMa {\\n  position: absolute;\\n  top: 0px;\\n  right: 10px;\\n}\\n\\n.menu__menuButtom--1U-B8 {\\n  width: 50px;\\n  height: 50px;\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  transform: rotate(90deg);\\n  border-radius: 31px;\\n  background: transparent;\\n  border: 0;\\n}\\n\\n.menu__menuButtonImg--3HAVq {\\n  padding: 5px;\\n  width: 31px;\\n  height: 31px;\\n  border-radius: 31px;\\n  border-radius: 31px;\\n  background: transparent;\\n}\\n\\n.menu__menuButtonImg--3HAVq:active, .menu__menuButtomImg--3UWil:hover {\\n  background-color: rgba(51, 51, 51, 0.1);\\n}\", \"\"]);\n// Exports\nexports.locals = {\n\t\"menu\": \"menu__menu--3ALMa\",\n\t\"menuButtom\": \"menu__menuButtom--1U-B8\",\n\t\"menuButtonImg\": \"menu__menuButtonImg--3HAVq\",\n\t\"menuButtomImg\": \"menu__menuButtomImg--3UWil\"\n};\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Menu/menu.scss?./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/sass-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".menu__menu--3ALMa {\\n  position: absolute;\\n  top: 0px;\\n  right: 10px;\\n}\\n\\n.menu__menuButtom--1U-B8 {\\n  width: 50px;\\n  height: 50px;\\n  display: flex;\\n  align-items: center;\\n  justify-content: center;\\n  transform: rotate(90deg);\\n  border-radius: 31px;\\n  background: transparent;\\n  border: 0;\\n}\\n\\n.menu__menuButtonImg--3HAVq {\\n  padding: 5px;\\n  width: 31px;\\n  height: 31px;\\n  border-radius: 31px;\\n  border-radius: 31px;\\n  background: transparent;\\n}\\n\\n.menu__menuButtonImg--3HAVq:active, .menu__menuButtomImg--3UWil:hover {\\n  background-color: rgba(51, 51, 51, 0.1);\\n}\\n\\n.menu__icon-premium--1pEAN {\\n  box-sizing: border-box;\\n  padding: 10px 10px;\\n}\\n.menu__icon-premium--1pEAN:hover {\\n  background-color: #b6b6b6;\\n}\", \"\"]);\n// Exports\nexports.locals = {\n\t\"menu\": \"menu__menu--3ALMa\",\n\t\"menuButtom\": \"menu__menuButtom--1U-B8\",\n\t\"menuButtonImg\": \"menu__menuButtonImg--3HAVq\",\n\t\"menuButtomImg\": \"menu__menuButtomImg--3UWil\",\n\t\"icon-premium\": \"menu__icon-premium--1pEAN\"\n};\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Menu/menu.scss?./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -203,7 +203,7 @@ eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".sortblock__sortBlock--1otXh {\\n  background-color: #ffffff;\\n  padding: 11px 20px;\\n  border-radius: 7px;\\n  margin: 0 0 5px;\\n}\\n\\n@media all and (mix-width: 1024px) {\\n  .sortblock__sortBlock--1otXh {\\n    background-color: transparent;\\n    padding: 0;\\n    margin: 0;\\n    border-radius: 0;\\n  }\\n}\", \"\"]);\n// Exports\nexports.locals = {\n\t\"sortBlock\": \"sortblock__sortBlock--1otXh\"\n};\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/shared/Header/SortBlock/sortblock.scss?./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/sass-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".sortblock__sortBlock--1otXh {\\n  background-color: #ffffff;\\n  padding: 11px 20px;\\n  border-radius: 7px;\\n  margin: 0 0 5px;\\n}\\n\\n@media all and (mix-width: 1024px) {\\n  .sortblock__sortBlock--1otXh {\\n    background-color: transparent;\\n    padding: 0;\\n    margin: 0;\\n    border-radius: 0;\\n  }\\n}\\n.sortblock__dropList--kyols {\\n  position: relative;\\n  box-sizing: border-box;\\n  height: fit-content;\\n  width: fit-content;\\n  background-color: #ffffff;\\n  background-color: #ffffff;\\n  border-radius: 7px;\\n  z-index: 5;\\n}\\n\\n.sortblock__dropItem--OVHQy {\\n  box-sizing: border-box;\\n  padding: 10px 10px;\\n}\\n.sortblock__dropItem--OVHQy:hover {\\n  background-color: #b6b6b6;\\n}\\n\\n.sortblock__icon-premium--hx64k {\\n  box-sizing: border-box;\\n  padding: 10px 10px;\\n}\\n.sortblock__icon-premium--hx64k:hover {\\n  background-color: #b6b6b6;\\n}\\n\\n.sortblock__icon-powerup--3zIzF {\\n  box-sizing: border-box;\\n  padding: 10px 10px;\\n}\\n.sortblock__icon-powerup--3zIzF:hover {\\n  background-color: #b6b6b6;\\n}\\n\\n.sortblock__icon-help--2dyGx {\\n  box-sizing: border-box;\\n  padding: 10px 10px;\\n}\\n.sortblock__icon-help--2dyGx:hover {\\n  background-color: #b6b6b6;\\n}\\n\\n.sortblock__icon-premium--hx64k::before {\\n  content: \\\"<\\\";\\n  margin-right: 2px;\\n}\\n\\n.sortblock__icon-powerup--3zIzF::before {\\n  content: \\\">\\\";\\n  margin-right: 2px;\\n}\\n\\n.sortblock__icon-help--2dyGx::before {\\n  content: \\\"?\\\";\\n  margin-right: 2px;\\n}\\n\\n.sortblock__list--3KJrQ {\\n  top: -50px;\\n}\", \"\"]);\n// Exports\nexports.locals = {\n\t\"sortBlock\": \"sortblock__sortBlock--1otXh\",\n\t\"dropList\": \"sortblock__dropList--kyols\",\n\t\"dropItem\": \"sortblock__dropItem--OVHQy\",\n\t\"icon-premium\": \"sortblock__icon-premium--hx64k\",\n\t\"icon-powerup\": \"sortblock__icon-powerup--3zIzF\",\n\t\"icon-help\": \"sortblock__icon-help--2dyGx\",\n\t\"list\": \"sortblock__list--3KJrQ\"\n};\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/shared/Header/SortBlock/sortblock.scss?./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -416,7 +416,7 @@ eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst Layout_1 = __webpack_require__(/*! ./Layout/Layout */ \"./src/shared/Layout/Layout.tsx\");\r\n__webpack_require__(/*! ./main.global.scss */ \"./src/shared/main.global.scss\");\r\nconst Header_1 = __webpack_require__(/*! ./Header */ \"./src/shared/Header/index.ts\");\r\nconst Content_1 = __webpack_require__(/*! ./Content */ \"./src/shared/Content/index.ts\");\r\nconst CardList_1 = __webpack_require__(/*! ./CardList */ \"./src/shared/CardList/index.ts\");\r\nconst Function_1 = __webpack_require__(/*! ./Function */ \"./src/shared/Function.tsx\");\r\nconst generateRandomIndex_1 = __webpack_require__(/*! ./utils/React/generateRandomIndex */ \"./src/shared/utils/React/generateRandomIndex.ts\");\r\nconst merge_1 = __webpack_require__(/*! ./utils/JS/merge */ \"./src/shared/utils/JS/merge.ts\");\r\nconst useIsMuonted_1 = __webpack_require__(/*! ./utils/React/useIsMuonted */ \"./src/shared/utils/React/useIsMuonted.tsx\");\r\nconst Dropdown_1 = __webpack_require__(/*! ./Dropdown */ \"./src/shared/Dropdown/index.ts\");\r\nlet LIST = [\r\n    { title: 'Audio' },\r\n    { title: 'Bio' },\r\n    { title: 'Ali' },\r\n].map(generateRandomIndex_1.generateId);\r\nfunction App() {\r\n    const [list, setList] = React.useState(LIST);\r\n    const [isMounted] = useIsMuonted_1.useIsMounted();\r\n    const itemDelete = (id) => {\r\n        setList(list.filter((item) => item.id !== id));\r\n    };\r\n    const addItem = () => {\r\n        setList(list.concat(generateRandomIndex_1.generateId({ title: generateRandomIndex_1.generateRandomString() })));\r\n    };\r\n    return (React.createElement(Layout_1.Layout, null,\r\n        React.createElement(Function_1.Feed, { blocks: list.map(merge_1.merge({ onClick: itemDelete })) }),\r\n        React.createElement(\"button\", { onClick: addItem }, \"Add me\"),\r\n        React.createElement(Header_1.Header, null),\r\n        React.createElement(Content_1.Content, null,\r\n            React.createElement(CardList_1.CardList, null),\r\n            React.createElement(\"div\", { style: { padding: 20 } },\r\n                React.createElement(Dropdown_1.Dropdown, { button: React.createElement(\"button\", null, \"Test\") },\r\n                    React.createElement(\"ul\", null,\r\n                        React.createElement(\"li\", null, \"122\")))))));\r\n}\r\nexports.App = App;\r\n\n\n//# sourceURL=webpack:///./src/shared/App.tsx?");
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst Layout_1 = __webpack_require__(/*! ./Layout/Layout */ \"./src/shared/Layout/Layout.tsx\");\r\n__webpack_require__(/*! ./main.global.scss */ \"./src/shared/main.global.scss\");\r\nconst Header_1 = __webpack_require__(/*! ./Header */ \"./src/shared/Header/index.ts\");\r\nconst Content_1 = __webpack_require__(/*! ./Content */ \"./src/shared/Content/index.ts\");\r\nconst CardList_1 = __webpack_require__(/*! ./CardList */ \"./src/shared/CardList/index.ts\");\r\nfunction App() {\r\n    return (React.createElement(Layout_1.Layout, null,\r\n        React.createElement(Header_1.Header, null),\r\n        React.createElement(Content_1.Content, null,\r\n            React.createElement(CardList_1.CardList, null))));\r\n}\r\nexports.App = App;\r\n\n\n//# sourceURL=webpack:///./src/shared/App.tsx?");
 
 /***/ }),
 
@@ -476,7 +476,7 @@ eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProp
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst menu_scss_1 = __importDefault(__webpack_require__(/*! ./menu.scss */ \"./src/shared/CardList/Card/Menu/menu.scss\"));\r\nfunction Menu() {\r\n    return (react_1.default.createElement(\"div\", { className: menu_scss_1.default.menu },\r\n        react_1.default.createElement(\"button\", { className: menu_scss_1.default.menuButton },\r\n            react_1.default.createElement(\"img\", { className: menu_scss_1.default.menuButtonImg, src: \"https://www.pngrepo.com/download/75784/three-dots-menu.png\" }))));\r\n}\r\nexports.Menu = Menu;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Menu/Menu.tsx?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst Dropdown_1 = __webpack_require__(/*! ../../../Dropdown */ \"./src/shared/Dropdown/index.ts\");\r\nconst List_1 = __webpack_require__(/*! ../../../Header/SortBlock/List */ \"./src/shared/Header/SortBlock/List.tsx\");\r\nconst generateRandomIndex_1 = __webpack_require__(/*! ../../../utils/React/generateRandomIndex */ \"./src/shared/utils/React/generateRandomIndex.ts\");\r\nconst merge_1 = __webpack_require__(/*! ../../../utils/js/merge */ \"./src/shared/utils/js/merge.ts\");\r\nconst menu_scss_1 = __importDefault(__webpack_require__(/*! ./menu.scss */ \"./src/shared/CardList/Card/Menu/menu.scss\"));\r\nconst LIST = [\r\n    { title: 'Rising', class: 'dropItem' },\r\n    { title: 'Powerups', class: 'icon-powerup' },\r\n    { title: 'Premium', class: 'icon-premium' },\r\n    { title: 'Talk', class: 'dropItem' },\r\n    { title: 'Predictions', class: 'dropItem' },\r\n    { title: 'Help Center', class: 'icon-help' },\r\n].map(generateRandomIndex_1.generateId);\r\nfunction Menu() {\r\n    const [mainButton, setMainButton] = react_1.default.useState('Rising');\r\n    const handleClick = (id) => {\r\n        const newList = LIST.filter((item) => item.id == id);\r\n        const [newItem] = newList;\r\n        setMainButton(newItem.title);\r\n    };\r\n    return (react_1.default.createElement(\"div\", { className: menu_scss_1.default.menu },\r\n        react_1.default.createElement(Dropdown_1.Dropdown, { button: react_1.default.createElement(\"button\", { className: menu_scss_1.default.menuButton },\r\n                react_1.default.createElement(\"img\", { className: menu_scss_1.default.menuButtonImg, src: \"https://www.pngrepo.com/download/75784/three-dots-menu.png\" })) },\r\n            react_1.default.createElement(List_1.Feed, { blocks: LIST.map(merge_1.merge({ onClick: handleClick })) }))));\r\n}\r\nexports.Menu = Menu;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Menu/Menu.tsx?");
 
 /***/ }),
 
@@ -680,7 +680,7 @@ eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProp
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst dropdown_scss_1 = __importDefault(__webpack_require__(/*! ./dropdown.scss */ \"./src/shared/Dropdown/dropdown.scss\"));\r\nconst NOOP = () => { };\r\nfunction Dropdown({ button, children, isOpen, onOpen = NOOP, onClose = NOOP }) {\r\n    const [isDropdownOpen, setIsDropdownOpen] = react_1.default.useState(isOpen);\r\n    react_1.default.useEffect(() => setIsDropdownOpen(isOpen), [isOpen]);\r\n    react_1.default.useEffect(() => isDropdownOpen ? onOpen() : onClose(), [isDropdownOpen]);\r\n    const handleOpen = () => {\r\n        if (isOpen == undefined) {\r\n            setIsDropdownOpen(!isDropdownOpen);\r\n        }\r\n    };\r\n    return (react_1.default.createElement(\"div\", { className: dropdown_scss_1.default.container },\r\n        react_1.default.createElement(\"div\", { onClick: () => handleOpen }, button),\r\n        isDropdownOpen && (react_1.default.createElement(\"div\", { className: dropdown_scss_1.default.listContainer },\r\n            react_1.default.createElement(\"div\", { className: dropdown_scss_1.default.list, onClick: () => setIsDropdownOpen(false) }, children)))));\r\n}\r\nexports.Dropdown = Dropdown;\r\n\n\n//# sourceURL=webpack:///./src/shared/Dropdown/Dropdown.tsx?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst dropdown_scss_1 = __importDefault(__webpack_require__(/*! ./dropdown.scss */ \"./src/shared/Dropdown/dropdown.scss\"));\r\nconst NOOP = () => { };\r\nfunction Dropdown({ button, children, isOpen = false, onOpen = NOOP, onClose = NOOP }) {\r\n    const [isDropdownOpen, setIsDropdownOpen] = react_1.default.useState(isOpen);\r\n    react_1.default.useEffect(() => setIsDropdownOpen(isOpen), [isOpen]);\r\n    react_1.default.useEffect(() => isDropdownOpen ? onOpen() : onClose(), [isDropdownOpen]);\r\n    return (react_1.default.createElement(\"div\", { className: dropdown_scss_1.default.container },\r\n        react_1.default.createElement(\"div\", { onClick: () => setIsDropdownOpen(!isDropdownOpen) }, button),\r\n        isDropdownOpen && (react_1.default.createElement(\"div\", { className: dropdown_scss_1.default.listContainer },\r\n            react_1.default.createElement(\"div\", { className: dropdown_scss_1.default.list, onClick: () => setIsDropdownOpen(false) }, children)))));\r\n}\r\nexports.Dropdown = Dropdown;\r\n\n\n//# sourceURL=webpack:///./src/shared/Dropdown/Dropdown.tsx?");
 
 /***/ }),
 
@@ -705,18 +705,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 "use strict";
 eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\r\n}\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\n__export(__webpack_require__(/*! ./Dropdown */ \"./src/shared/Dropdown/Dropdown.tsx\"));\r\n\n\n//# sourceURL=webpack:///./src/shared/Dropdown/index.ts?");
-
-/***/ }),
-
-/***/ "./src/shared/Function.tsx":
-/*!*********************************!*\
-  !*** ./src/shared/Function.tsx ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst withKey_1 = __webpack_require__(/*! ./utils/React/withKey */ \"./src/shared/utils/React/withKey.tsx\");\r\nfunction Feed(props) {\r\n    return (React.createElement(\"div\", null, props.blocks.map(withKey_1.withIdKey(Block))));\r\n}\r\nexports.Feed = Feed;\r\nfunction Block(props) {\r\n    return (React.createElement(\"div\", { onClick: () => props.onClick(props.id) },\r\n        \"  \",\r\n        props.title));\r\n}\r\nexports.Block = Block;\r\n\n\n//# sourceURL=webpack:///./src/shared/Function.tsx?");
 
 /***/ }),
 
@@ -768,6 +756,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 /***/ }),
 
+/***/ "./src/shared/Header/SortBlock/List.tsx":
+/*!**********************************************!*\
+  !*** ./src/shared/Header/SortBlock/List.tsx ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst withKey_1 = __webpack_require__(/*! ../../utils/React/withKey */ \"./src/shared/utils/React/withKey.tsx\");\r\nconst sortblock_scss_1 = __importDefault(__webpack_require__(/*! ./sortblock.scss */ \"./src/shared/Header/SortBlock/sortblock.scss\"));\r\nfunction Feed(props) {\r\n    return (React.createElement(\"ul\", { className: sortblock_scss_1.default.dropList }, props.blocks.map(withKey_1.withIdKey(Block))));\r\n}\r\nexports.Feed = Feed;\r\nfunction Block(props) {\r\n    return (React.createElement(\"li\", { className: sortblock_scss_1.default[props.class], onClick: () => props.onClick(props.id) }, props.title));\r\n}\r\nexports.Block = Block;\r\n\n\n//# sourceURL=webpack:///./src/shared/Header/SortBlock/List.tsx?");
+
+/***/ }),
+
 /***/ "./src/shared/Header/SortBlock/SortBlock.tsx":
 /*!***************************************************!*\
   !*** ./src/shared/Header/SortBlock/SortBlock.tsx ***!
@@ -776,7 +776,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst sortblock_scss_1 = __importDefault(__webpack_require__(/*! ./sortblock.scss */ \"./src/shared/Header/SortBlock/sortblock.scss\"));\r\nfunction SortBlock() {\r\n    return (react_1.default.createElement(\"div\", { className: sortblock_scss_1.default.sortBlock }, \"sorting dropdown\"));\r\n}\r\nexports.SortBlock = SortBlock;\r\n\n\n//# sourceURL=webpack:///./src/shared/Header/SortBlock/SortBlock.tsx?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nconst Dropdown_1 = __webpack_require__(/*! ../../Dropdown */ \"./src/shared/Dropdown/index.ts\");\r\nconst List_1 = __webpack_require__(/*! ./List */ \"./src/shared/Header/SortBlock/List.tsx\");\r\nconst merge_1 = __webpack_require__(/*! ../../utils/js/merge */ \"./src/shared/utils/js/merge.ts\");\r\nconst generateRandomIndex_1 = __webpack_require__(/*! ../../utils/React/generateRandomIndex */ \"./src/shared/utils/React/generateRandomIndex.ts\");\r\nconst sortblock_scss_1 = __importDefault(__webpack_require__(/*! ./sortblock.scss */ \"./src/shared/Header/SortBlock/sortblock.scss\"));\r\nlet LIST = [\r\n    { title: 'Everywhere', class: 'dropItem' },\r\n    { title: 'United Kingdom', class: 'dropItem' },\r\n    { title: 'United States', class: 'dropItem' },\r\n    { title: 'Argentina', class: 'dropItem' },\r\n    { title: 'Australia', class: 'dropItem' },\r\n    { title: 'Canada', class: 'dropItem' },\r\n    { title: 'Japan', class: 'dropItem' },\r\n    { title: 'Colombia', class: 'dropItem' },\r\n    { title: 'Brazilia', class: 'dropItem' },\r\n    { title: 'Finland', class: 'dropItem' },\r\n].map(generateRandomIndex_1.generateId);\r\nfunction SortBlock() {\r\n    const [mainButton, setMainButton] = react_1.default.useState('Everywhere');\r\n    const handleClick = (id) => {\r\n        const newList = LIST.filter((item) => item.id == id);\r\n        const [newItem] = newList;\r\n        setMainButton(newItem.title);\r\n    };\r\n    return (react_1.default.createElement(Dropdown_1.Dropdown, { button: react_1.default.createElement(\"button\", { className: sortblock_scss_1.default.sortBlock }, mainButton) },\r\n        react_1.default.createElement(List_1.Feed, { blocks: LIST.map(merge_1.merge({ onClick: handleClick })) })));\r\n}\r\nexports.SortBlock = SortBlock;\r\n\n\n//# sourceURL=webpack:///./src/shared/Header/SortBlock/SortBlock.tsx?");
 
 /***/ }),
 
@@ -912,18 +912,6 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nfu
 
 /***/ }),
 
-/***/ "./src/shared/utils/JS/merge.ts":
-/*!**************************************!*\
-  !*** ./src/shared/utils/JS/merge.ts ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nfunction merge(obj) {\r\n    return (obj2) => (Object.assign(Object.assign({}, obj), obj2));\r\n}\r\nexports.merge = merge;\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/JS/merge.ts?");
-
-/***/ }),
-
 /***/ "./src/shared/utils/React/generateRandomIndex.ts":
 /*!*******************************************************!*\
   !*** ./src/shared/utils/React/generateRandomIndex.ts ***!
@@ -936,18 +924,6 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nco
 
 /***/ }),
 
-/***/ "./src/shared/utils/React/useIsMuonted.tsx":
-/*!*************************************************!*\
-  !*** ./src/shared/utils/React/useIsMuonted.tsx ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nfunction useIsMounted() {\r\n    const [isMounted, setIsMounted] = React.useState(false);\r\n    React.useEffect(() => { setIsMounted(true); }, []);\r\n    return [isMounted];\r\n}\r\nexports.useIsMounted = useIsMounted;\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/React/useIsMuonted.tsx?");
-
-/***/ }),
-
 /***/ "./src/shared/utils/React/withKey.tsx":
 /*!********************************************!*\
   !*** ./src/shared/utils/React/withKey.tsx ***!
@@ -957,6 +933,18 @@ eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n
 
 "use strict";
 eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\r\nexports.withIdKey = withKey('id');\r\nfunction withKey(key) {\r\n    return (component) => (props, index) => react_1.default.createElement(component, Object.assign(Object.assign({}, props), { key: key ? props[key] : index }), []);\r\n}\r\nexports.withKey = withKey;\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/React/withKey.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/utils/js/merge.ts":
+/*!**************************************!*\
+  !*** ./src/shared/utils/js/merge.ts ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nfunction merge(obj) {\r\n    return (obj2) => (Object.assign(Object.assign({}, obj), obj2));\r\n}\r\nexports.merge = merge;\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/js/merge.ts?");
 
 /***/ })
 
