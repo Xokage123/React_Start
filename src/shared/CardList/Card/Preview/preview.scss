@@ -3,9 +3,12 @@
   .preview {
     order: 1;
   }
+  div.preview {
+    max-height: 178px;
+  }
 }
 .preview {
-  max-height: 258px;
+  max-height: 760px;
 }
 .previewImg {
 width: 100%;

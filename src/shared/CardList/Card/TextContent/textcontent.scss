@@ -1,7 +1,8 @@
 @import '../../../variables';
 @media all and (min-width: 1024px) {
-  .textContent {
+  div.textContent {
     order: 2;
+    flex-flow: column-reverse;
   }
   span.publishedLabel {
     display: unset;
@@ -10,6 +11,18 @@
 @media all and (min-width: 1540px) {
   .textContent {
     flex-basis: 672px;
+  }
+  .postLink::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .username {
+    position: relative;
+    z-index: 1;
   }
 }
 .textContent > * {
@@ -33,6 +46,9 @@
   align-items: center;
   height: 20px;
   padding: 0 6px 0 0;
+}
+.userLink:hover a {
+  text-decoration: underline;
 }
 .avatar {
   border-radius: 20px;
