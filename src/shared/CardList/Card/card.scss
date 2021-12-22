@@ -1,11 +1,19 @@
 @import '../../variables';
-
+@media all and (min-width: 1024px) {
+    li.card {
+        flex-direction: row;
+    }
+}
+@media all and (min-width: 1540px) {
+    .card {
+        padding: 0 60px;
+    }
+}
 .card {
     background-color: $white;
     border-radius: 7px;
     display: flex;
-    flex-flow: row nowrap;
-    flex-direction: column;
+    flex-flow: column nowrap;
     position: relative;
 } 
 .card > * {

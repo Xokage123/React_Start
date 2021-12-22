@@ -1,7 +1,11 @@
 @import '../../../variables';
-
+@media all and (min-width: 1024px) {
+  .preview {
+    order: 1;
+  }
+}
 .preview {
-  padding: 20px 0 5px 0;
+  max-height: 258px;
 }
 .previewImg {
 width: 100%;
