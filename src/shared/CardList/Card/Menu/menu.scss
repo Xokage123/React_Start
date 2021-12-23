@@ -2,7 +2,19 @@
 @media all and (min-width: 1024px) {
   div.menu {
     top: 73px;
-    right: 5%;
+    right: 6%;
+  }
+  button.closeButton {
+    font-size: 14px;
+  }
+  .menuButton {
+    transform: rotate(90deg);
+  }
+}
+@media all and (min-width: 1540px) {
+  div.menu {
+    top: 73px;
+    right: 9%;
   }
 }
 .menu {
@@ -16,7 +28,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: rotate(90deg);
   border-radius: 31px;
   background: transparent;
   border: 0;
@@ -32,4 +43,12 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   background-color: $white;
+}
+.closeButton {
+  font-size: 12px;
+  color: $grey66;
+  background-color: $greyD9;
+  padding: 12px 23px;
+  border-radius: 0 0 3px 3px;
+  width: 100%;
 }

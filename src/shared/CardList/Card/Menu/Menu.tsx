@@ -5,6 +5,7 @@ import { generateId } from '../../../utils/React/generateRandomIndex';
 import { merge } from '../../../utils/js/merge';
 import styles from './menu.scss';
 import { MenuIcon } from '../../../Icons/MenuIcon';
+import { MenuItemsList } from './MenuItemsList';
 
 const LIST = [
   { title: 'Rising', class: 'dropItem' },
@@ -31,9 +32,10 @@ export function Menu() {
         <MenuIcon />
       </button>}>
         <div className={styles.dropDown}>
-          Rising
-          Powerups
-          Premium
+          <MenuItemsList postID='1' />
+          <button className={styles.closeButton}>
+            Закрыть
+          </button>
         </div>
       </Dropdown>
    </div>

@@ -22,6 +22,9 @@
   .textContent {
     flex-basis: 672px;
   }
+  .title {
+    position: relative;
+  }
   .postLink::after {
     content: '';
     position: absolute;
