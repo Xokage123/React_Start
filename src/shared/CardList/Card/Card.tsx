@@ -12,7 +12,6 @@ export function Card() {
      <Preview />
      <Menu />
      <Controls />
-     <div></div>
    </li>
   );
 }

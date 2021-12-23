@@ -7,6 +7,16 @@
   span.publishedLabel {
     display: unset;
   }
+ .userLink {
+   order: 2;
+   flex-direction: row-reverse;
+ }
+ img.avatar {
+   margin: 0 7px 0 7px;
+ }
+ .createdAt {
+   order: 1;
+ }
 }
 @media all and (min-width: 1540px) {
   .textContent {
