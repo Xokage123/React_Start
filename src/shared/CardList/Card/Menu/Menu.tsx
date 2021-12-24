@@ -6,6 +6,7 @@ import { merge } from '../../../utils/js/merge';
 import styles from './menu.scss';
 import { MenuIcon } from '../../../Icons/MenuIcon';
 import { MenuItemsList } from './MenuItemsList';
+import { Text, EColors} from '../../../Text/Text';
 
 const LIST = [
   { title: 'Rising', class: 'dropItem' },
@@ -34,7 +35,9 @@ export function Menu() {
         <div className={styles.dropDown}>
           <MenuItemsList postID='1' />
           <button className={styles.closeButton}>
-            Закрыть
+            <Text mobileSize={12} size={14} color={EColors.gray66}>
+              Закрыть
+            </Text>
           </button>
         </div>
       </Dropdown>
