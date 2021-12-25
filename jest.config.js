@@ -4,6 +4,6 @@ module.exports = {
   testEnvironment: 'node',
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   moduleNameMapper: {
-    "\\.(scss)": "identity-obj-proxy"
-  }
+    "\\.(scss)": "identity-obj-proxy"},
+  snapshotSerializers: ["enzyme-to-json/serializer"]
 };
