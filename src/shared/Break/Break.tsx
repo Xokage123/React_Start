@@ -7,11 +7,11 @@ type TDisplays = 'mobile' | 'tablet' | 'desktop';
 
 interface IBreakProps {
   inline: false,
-  top: false,
-  size: TBreakSize,
-  mobileSize: TBreakSize,
-  tabletSize: TBreakSize,
-  desktopSize: TBreakSize,
+  top?: false,
+  size?: TBreakSize,
+  mobileSize?: TBreakSize,
+  tabletSize?: TBreakSize,
+  desktopSize?: TBreakSize,
 }
 
 export function Break(props: IBreakProps) {

@@ -3,6 +3,7 @@ import { BlockIcon } from '../../../../Icons/BlockIcon';
 import styles from './menuitemslist.scss';
 import { WarningIcon } from '../../../../Icons/WarningIcon'
 import { Text, EColors } from '../../../../Text/Text';
+import { Icon, EIcons } from '../../../../Icons/Icon';
 
 
 interface IMenuItemsListProps {
@@ -20,7 +21,7 @@ export function MenuItemsList({ postID }: IMenuItemsListProps ) {
       <div className={styles.divider}/>
 
       <li className={styles.menuItem}>
-        <WarningIcon />
+        <WarningIcon /> 
        <Text size={12} color={EColors.gray99}>Пожаловаться</Text>
       </li>
     </ul>

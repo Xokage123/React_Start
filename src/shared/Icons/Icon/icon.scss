@@ -1,0 +1,38 @@
+.block {
+    display: inline;
+    .warning {
+        display: none;
+    }
+}
+.warning {
+    display: inline;
+    .block {
+        display: none;
+    }
+}
+
+.s28 {
+    width: 28px;
+    height: 28px;
+}
+.s20 {
+    width: 20px;
+    height: 20px;
+}
+.s16 {
+    width: 16px;
+    height: 16px;
+}
+.s14 {
+    width: 14px;
+    height: 14px;
+}
+.s12 {
+    width: 12px;
+    height: 12px;
+}
+.s10 {
+    width: 10px;
+    height: 10px;
+}
+
