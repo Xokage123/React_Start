@@ -14,14 +14,14 @@ export function MenuItemsList({ postID }: IMenuItemsListProps ) {
   return (
     <ul className={styles.menuItemsLink}>
       <li onClick={() => console.log(postID)} className={styles.menuItem}>
-        <BlockIcon />
+        <Icon name={EIcons.block} size={16}/>
         <Text size={12} color={EColors.gray99}>Скрыть</Text>
       </li>
 
       <div className={styles.divider}/>
 
       <li className={styles.menuItem}>
-        <WarningIcon /> 
+        <Icon name={EIcons.warning} size={16}/>
        <Text size={12} color={EColors.gray99}>Пожаловаться</Text>
       </li>
     </ul>
