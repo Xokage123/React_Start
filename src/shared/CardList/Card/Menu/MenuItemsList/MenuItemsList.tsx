@@ -20,6 +20,13 @@ export function MenuItemsList({ postID }: IMenuItemsListProps ) {
 
       <div className={styles.divider}/>
 
+      <li className={styles.menuItemDesk}>
+        <Icon name={EIcons.save} size={16}/>
+        <Text size={12} color={EColors.gray99}>Сохронить</Text>
+      </li>
+
+      <div className={styles.divider}/>
+
       <li className={styles.menuItem}>
         <Icon name={EIcons.warning} size={16}/>
        <Text size={12} color={EColors.gray99}>Пожаловаться</Text>
