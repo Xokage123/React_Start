@@ -6,7 +6,7 @@ type TBreakSize = 4 | 8 | 12 | 16 | 20;
 type TDisplays = 'mobile' | 'tablet' | 'desktop';
 
 interface IBreakProps {
-  inline: false,
+  inline?: false,
   top?: false,
   size?: TBreakSize,
   mobileSize?: TBreakSize,
