@@ -13,6 +13,20 @@ interface IMenuItemsListProps {
 export function MenuItemsList({ postID }: IMenuItemsListProps ) {
   return (
     <ul className={styles.menuItemsLink}>
+      <li onClick={() => console.log(postID)} className={styles.menuItemDesk}>
+        <Icon name={EIcons.comment} size={16}/>
+        <Text size={12} color={EColors.gray99}>Комментарии</Text>
+      </li>
+
+      <div className={styles.dividerDesk}/>
+        
+      <li onClick={() => console.log(postID)} className={styles.menuItemDesk}>
+        <Icon name={EIcons.share} size={16}/>
+        <Text size={12} color={EColors.gray99}>Поделиться</Text>
+      </li>
+
+      <div className={styles.dividerDesk}/>
+      
       <li onClick={() => console.log(postID)} className={styles.menuItem}>
         <Icon name={EIcons.block} size={16}/>
         <Text size={12} color={EColors.gray99}>Скрыть</Text>
@@ -25,7 +39,7 @@ export function MenuItemsList({ postID }: IMenuItemsListProps ) {
         <Text size={12} color={EColors.gray99}>Сохронить</Text>
       </li>
 
-      <div className={styles.divider}/>
+      <div className={styles.dividerDesk}/>
 
       <li className={styles.menuItem}>
         <Icon name={EIcons.warning} size={16}/>
