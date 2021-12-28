@@ -98,6 +98,30 @@ eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n
 
 /***/ }),
 
+/***/ "./src/hooks/useToken.ts":
+/*!*******************************!*\
+  !*** ./src/hooks/useToken.ts ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nfunction useToken() {\r\n    const [token, setToken] = React.useState('');\r\n    React.useEffect(() => {\r\n        if (window.__token__) {\r\n            setToken(window.__token__);\r\n        }\r\n    }, []);\r\n    return [token];\r\n}\r\nexports.useToken = useToken;\r\n\n\n//# sourceURL=webpack:///./src/hooks/useToken.ts?");
+
+/***/ }),
+
+/***/ "./src/hooks/useUserData.ts":
+/*!**********************************!*\
+  !*** ./src/hooks/useUserData.ts ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nconst axios_1 = __importDefault(__webpack_require__(/*! axios */ \"axios\"));\r\nconst tokenContaxt_1 = __webpack_require__(/*! ../shared/context/tokenContaxt */ \"./src/shared/context/tokenContaxt.ts\");\r\nfunction useUserData() {\r\n    const token = React.useContext(tokenContaxt_1.tokenContext);\r\n    const [data, setData] = React.useState({});\r\n    React.useEffect(() => {\r\n        axios_1.default.get('https://oauth.reddit.com/api/v1/me', {\r\n            headers: { Authorization: `bearer ${token}` }\r\n        })\r\n            .then((resp) => {\r\n            const userData = resp.data;\r\n            setData({ name: userData.name, iconImg: userData.icon_img });\r\n        })\r\n            .catch(console.log);\r\n    }, [token]);\r\n    return [data];\r\n}\r\nexports.useUserData = useUserData;\r\n\n\n//# sourceURL=webpack:///./src/hooks/useUserData.ts?");
+
+/***/ }),
+
 /***/ "./src/server/indexTemplate.js":
 /*!*************************************!*\
   !*** ./src/server/indexTemplate.js ***!
@@ -106,7 +130,7 @@ eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.indexTemplate = (content) => `\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Reddit</title>\r\n  <script src=\"/static/client.js\" type=\"application/javascript\"></script>\r\n</head>\r\n<body>\r\n  <div id=\"react_root\">${content}</div>\r\n</body>\r\n</html>\r\n`;\r\n\n\n//# sourceURL=webpack:///./src/server/indexTemplate.js?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.indexTemplate = (content, token) => `\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Reddit</title>\r\n  <script src=\"/static/client.js\" type=\"application/javascript\"></script>\r\n  <script>\r\n   window.__token__ = '${token}'\r\n  </script>\r\n</head>\r\n<body>\r\n  <div id=\"react_root\">${content}</div>\r\n</body>\r\n</html>\r\n`;\r\n\n\n//# sourceURL=webpack:///./src/server/indexTemplate.js?");
 
 /***/ }),
 
@@ -118,7 +142,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nex
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst express_1 = __importDefault(__webpack_require__(/*! express */ \"express\"));\r\nconst server_1 = __importDefault(__webpack_require__(/*! react-dom/server */ \"react-dom/server\"));\r\nconst App_1 = __webpack_require__(/*! ../shared/App */ \"./src/shared/App.tsx\");\r\nconst indexTemplate_1 = __webpack_require__(/*! ./indexTemplate */ \"./src/server/indexTemplate.js\");\r\nconst app = express_1.default();\r\napp.use('/static', express_1.default.static('./dist/client'));\r\napp.get('/', (req, res) => {\r\n    res.send(indexTemplate_1.indexTemplate(server_1.default.renderToString(react_1.default.createElement(App_1.App, null))));\r\n});\r\napp.get('/auth', (req, res) => {\r\n    // req.query.code\r\n    res.send(indexTemplate_1.indexTemplate(server_1.default.renderToString(react_1.default.createElement(App_1.App, null))));\r\n});\r\napp.listen(3000, () => {\r\n    console.log('Server started on http://localhost:3000');\r\n});\r\n\n\n//# sourceURL=webpack:///./src/server/server.js?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst express_1 = __importDefault(__webpack_require__(/*! express */ \"express\"));\r\nconst server_1 = __importDefault(__webpack_require__(/*! react-dom/server */ \"react-dom/server\"));\r\nconst App_1 = __webpack_require__(/*! ../shared/App */ \"./src/shared/App.tsx\");\r\nconst indexTemplate_1 = __webpack_require__(/*! ./indexTemplate */ \"./src/server/indexTemplate.js\");\r\nconst axios_1 = __importDefault(__webpack_require__(/*! axios */ \"axios\"));\r\nconst app = express_1.default();\r\napp.use('/static', express_1.default.static('./dist/client'));\r\napp.get('/', (req, res) => {\r\n    res.send(indexTemplate_1.indexTemplate(server_1.default.renderToString(react_1.default.createElement(App_1.App, null))));\r\n});\r\napp.get('/auth', (req, res) => {\r\n    axios_1.default.post('https://www.reddit.com/api/v1/access_token', `grant_type=authorization_code&code=${req.query.code}&redirect_uri=http://localhost:3000/auth`, {\r\n        auth: { username: 'wPuZkCZI9S4RJ87ZKWwc0w', password: 'EmuC04f1ckYXf7OLCPwGUTL89dl4bw' },\r\n        headers: { 'Content-type': 'application/x-www-form-urlencoded' }\r\n    })\r\n        .then(({ data }) => {\r\n        res.send(indexTemplate_1.indexTemplate(server_1.default.renderToString(react_1.default.createElement(App_1.App, null)), data['access_token']));\r\n    })\r\n        .catch(console.log);\r\n});\r\napp.listen(3000, () => {\r\n    console.log('Server started on http://localhost:3000');\r\n});\r\n\n\n//# sourceURL=webpack:///./src/server/server.js?");
 
 /***/ }),
 
@@ -130,7 +154,7 @@ eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod)
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nconst Layout_1 = __webpack_require__(/*! ./Layout/Layout */ \"./src/shared/Layout/Layout.tsx\");\r\n__webpack_require__(/*! ./main.global.scss */ \"./src/shared/main.global.scss\");\r\nconst Header_1 = __webpack_require__(/*! ./Header */ \"./src/shared/Header/index.ts\");\r\nconst Content_1 = __webpack_require__(/*! ./Content */ \"./src/shared/Content/index.ts\");\r\nconst CardList_1 = __webpack_require__(/*! ./CardList */ \"./src/shared/CardList/index.ts\");\r\nfunction App() {\r\n    return (React.createElement(Layout_1.Layout, null,\r\n        React.createElement(Header_1.Header, null),\r\n        React.createElement(Content_1.Content, null,\r\n            React.createElement(CardList_1.CardList, null))));\r\n}\r\nexports.App = App;\r\n\n\n//# sourceURL=webpack:///./src/shared/App.tsx?");
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nconst Layout_1 = __webpack_require__(/*! ./Layout/Layout */ \"./src/shared/Layout/Layout.tsx\");\r\n__webpack_require__(/*! ./main.global.scss */ \"./src/shared/main.global.scss\");\r\nconst Header_1 = __webpack_require__(/*! ./Header */ \"./src/shared/Header/index.ts\");\r\nconst Content_1 = __webpack_require__(/*! ./Content */ \"./src/shared/Content/index.ts\");\r\nconst CardList_1 = __webpack_require__(/*! ./CardList */ \"./src/shared/CardList/index.ts\");\r\nconst useToken_1 = __webpack_require__(/*! ../hooks/useToken */ \"./src/hooks/useToken.ts\");\r\nconst tokenContaxt_1 = __webpack_require__(/*! ./context/tokenContaxt */ \"./src/shared/context/tokenContaxt.ts\");\r\nconst userContext_1 = __webpack_require__(/*! ./context/userContext */ \"./src/shared/context/userContext.tsx\");\r\nfunction App() {\r\n    const [token] = useToken_1.useToken();\r\n    return (React.createElement(tokenContaxt_1.tokenContext.Provider, { value: token },\r\n        React.createElement(userContext_1.UserContextProvider, null,\r\n            React.createElement(Layout_1.Layout, null,\r\n                React.createElement(Header_1.Header, null),\r\n                React.createElement(Content_1.Content, null,\r\n                    React.createElement(CardList_1.CardList, null))))));\r\n}\r\nexports.App = App;\r\n\n\n//# sourceURL=webpack:///./src/shared/App.tsx?");
 
 /***/ }),
 
@@ -504,7 +528,7 @@ eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod)
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst searchblock_scss_1 = __importDefault(__webpack_require__(/*! ./searchblock.scss */ \"./src/shared/Header/SearchBlock/searchblock.scss\"));\r\nconst UserBlock_1 = __webpack_require__(/*! ./UserBlock */ \"./src/shared/Header/SearchBlock/UserBlock/index.ts\");\r\nfunction SearchBlock() {\r\n    return (react_1.default.createElement(\"div\", { className: searchblock_scss_1.default.searchBlock },\r\n        react_1.default.createElement(UserBlock_1.UserBlock, null)));\r\n}\r\nexports.SearchBlock = SearchBlock;\r\n\n\n//# sourceURL=webpack:///./src/shared/Header/SearchBlock/SearchBlock.tsx?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst searchblock_scss_1 = __importDefault(__webpack_require__(/*! ./searchblock.scss */ \"./src/shared/Header/SearchBlock/searchblock.scss\"));\r\nconst UserBlock_1 = __webpack_require__(/*! ./UserBlock */ \"./src/shared/Header/SearchBlock/UserBlock/index.ts\");\r\nconst userContext_1 = __webpack_require__(/*! ../../context/userContext */ \"./src/shared/context/userContext.tsx\");\r\nfunction SearchBlock() {\r\n    const { iconImg, name } = react_1.default.useContext(userContext_1.userContext);\r\n    return (react_1.default.createElement(\"div\", { className: searchblock_scss_1.default.searchBlock },\r\n        react_1.default.createElement(UserBlock_1.UserBlock, { avatarSrc: iconImg, userName: name })));\r\n}\r\nexports.SearchBlock = SearchBlock;\r\n\n\n//# sourceURL=webpack:///./src/shared/Header/SearchBlock/SearchBlock.tsx?");
 
 /***/ }),
 
@@ -776,6 +800,30 @@ eval("// Exports\nmodule.exports = {\n\t\"s28\": \"text__s28--NMm7b\",\n\t\"s20\
 
 /***/ }),
 
+/***/ "./src/shared/context/tokenContaxt.ts":
+/*!********************************************!*\
+  !*** ./src/shared/context/tokenContaxt.ts ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nexports.tokenContext = React.createContext('');\r\n\n\n//# sourceURL=webpack:///./src/shared/context/tokenContaxt.ts?");
+
+/***/ }),
+
+/***/ "./src/shared/context/userContext.tsx":
+/*!********************************************!*\
+  !*** ./src/shared/context/userContext.tsx ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nconst useUserData_1 = __webpack_require__(/*! ../../hooks/useUserData */ \"./src/hooks/useUserData.ts\");\r\nexports.userContext = React.createContext({});\r\nfunction UserContextProvider({ children }) {\r\n    const [data] = useUserData_1.useUserData();\r\n    return (React.createElement(exports.userContext.Provider, { value: data }, children));\r\n}\r\nexports.UserContextProvider = UserContextProvider;\r\n\n\n//# sourceURL=webpack:///./src/shared/context/userContext.tsx?");
+
+/***/ }),
+
 /***/ "./src/shared/main.global.scss":
 /*!*************************************!*\
   !*** ./src/shared/main.global.scss ***!
@@ -832,6 +880,17 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nfu
 
 "use strict";
 eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nfunction merge(obj) {\r\n    return (obj2) => (Object.assign(Object.assign({}, obj), obj2));\r\n}\r\nexports.merge = merge;\r\n\n\n//# sourceURL=webpack:///./src/shared/utils/js/merge.ts?");
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"axios\");\n\n//# sourceURL=webpack:///external_%22axios%22?");
 
 /***/ }),
 
