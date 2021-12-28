@@ -15,7 +15,7 @@ export function usePostsData() {
       headers: { Authorization: `bearer ${token}`}
     })
       .then((resp) => {
-        const postsData = resp.data.data.children
+        const postsData = resp.data.children
         setPostsData(postsData)
       })
   }, [token])
