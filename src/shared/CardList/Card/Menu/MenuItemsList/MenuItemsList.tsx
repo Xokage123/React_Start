@@ -12,7 +12,7 @@ interface IMenuItemsListProps {
 
 export function MenuItemsList({ postID }: IMenuItemsListProps ) {
   return (
-    <ul className={styles.menuItemsLink}>
+    <ul className={styles.menuItemsList}>
       <li onClick={() => console.log(postID)} className={styles.menuItemTablet}>
         <Icon name={EIcons.comment} size={16}/>
         <Text size={12} color={EColors.gray99}>Комментарии</Text>

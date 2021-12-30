@@ -58,9 +58,21 @@
 }
 
 @media all and (min-width: 1540px) {
-    .menuItemsLink > * :hover {
-        color: #CC6633;
-        cursor: pointer;
+    .menuItem:hover {
+        span {
+            color: #CC6633;
+        };
+        svg path {
+            fill: #CC6633;
+        }
+    }
+    .menuItemTablet:hover {
+        span {
+            color: #CC6633;
+        };
+        svg path {
+            fill: #CC6633;
+        }
     }
     
 }

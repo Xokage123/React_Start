@@ -13,15 +13,25 @@ interface ICardProps {
   score?: number;
   num_comments?: number;
   thumbnail: string;
+  created: number;
 }
 
 export function Card(props: ICardProps) {
   
-  const { id, username, title, score, num_comments, thumbnail } = props;
+  const { id, username, title, score, num_comments, thumbnail, created } = props;
+  
+  const createdAt = new Date(created);
+  
+  let unix_timestamp = created
+  let date = new Date(unix_timestamp * 1000);
+  let hours = date.getHours();
+  let minutes = "0" + date.getMinutes();
+  let year = date.getFullYear();
+  let formattedTime = hours + ':' + minutes.substr(-2) + ' ' + year + 'year'; 
 
   return (
    <li className={ styles.card } key={id}>
-     <TextContent username={username} title={title} /> 
+     <TextContent username={username} title={title} date={formattedTime}/> 
      <Preview thumbnail={thumbnail} />
      <Menu />
      <Controls score={score} num_comments={num_comments}/>

@@ -15,6 +15,7 @@ export function CardList() {
         title={item.title}
         score={item.score}
         num_comments={item.num_comments}
-        thumbnail={item.thumbnail}/>))}
+        thumbnail={item.thumbnail}
+        created={item.created}/>))}
     </ul>)
 }
