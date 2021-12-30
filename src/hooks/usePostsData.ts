@@ -12,8 +12,9 @@ export function usePostsData() {
     })
       .then((resp) => {
         const data = resp.data.data.children.map( (item: { kind: string , data: {[N: string]: any}}) => item.data);
-        const postsData = data.map((item: {[N: string]: any}) => ({ title: item.title, username: item.name, score: item.score, num_comments: item.num_comments, id: item.id, created: item.created }));
+        const postsData = data.map((item: {[N: string]: any}) => ({ title: item.title, username: item.name, score: item.score, num_comments: item.num_comments, id: item.id, created: item.created, thumbnail: item.thumbnail }));
         setPostsData(postsData);
+        console.log(data)
       })
   }, [token])
   

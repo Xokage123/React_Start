@@ -1,10 +1,15 @@
 import React from 'react';
 import styles from './preview.scss';
 
-export function Preview() {
+interface IPreviewProps {
+  thumbnail?: string;
+}
+
+export function Preview(props: IPreviewProps) {
+  const { thumbnail } = props;
   return (
     <div className={styles.preview}>
-    <img className={styles.previewImg} src="https://cdn.dribbble.com/users/4125071/screenshots/17041619/media/c9ade589fb28a581b7ea7930fb1c887e.png?compress=1&resize=1200x900"/>
+    <img className={styles.previewImg} src={thumbnail == 'self' ? 'https://media.rbcdn.ru/media/news/hangoutsscreen30_eiULbPJ.jpg' : thumbnail}/>
   </div>
   );
 }

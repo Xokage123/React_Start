@@ -12,16 +12,17 @@ interface ICardProps {
   title?: string;
   score?: number;
   num_comments?: number;
+  thumbnail: string;
 }
 
 export function Card(props: ICardProps) {
   
-  const { id, username, title, score, num_comments } = props;
+  const { id, username, title, score, num_comments, thumbnail } = props;
 
   return (
    <li className={ styles.card } key={id}>
      <TextContent username={username} title={title} /> 
-     <Preview />
+     <Preview thumbnail={thumbnail} />
      <Menu />
      <Controls score={score} num_comments={num_comments}/>
    </li>

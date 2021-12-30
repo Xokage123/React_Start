@@ -6,7 +6,7 @@ import { generateRandomString } from '../utils/React/generateRandomIndex';
 
 export function CardList() {
   const postsData = React.useContext(postsDataContext);
-  console.log(postsData)
+
   return (
     <ul className={styles.cardList}>
       {postsData.map((item: {[N: string]: any}) => (
@@ -14,6 +14,7 @@ export function CardList() {
         username={item.username}
         title={item.title}
         score={item.score}
-        num_comments={item.num_comments}/>))}
+        num_comments={item.num_comments}
+        thumbnail={item.thumbnail}/>))}
     </ul>)
 }

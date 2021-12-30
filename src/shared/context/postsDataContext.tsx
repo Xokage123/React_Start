@@ -9,6 +9,7 @@ export interface IPostsContextData {
   num_comments?: number;
   id?: string;
   created?: number;
+  thumbnail?: string;
 }
 
 export const postsDataContext = React.createContext<IPostsContextData>({});
