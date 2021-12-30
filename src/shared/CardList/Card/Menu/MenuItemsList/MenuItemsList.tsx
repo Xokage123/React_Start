@@ -13,19 +13,19 @@ interface IMenuItemsListProps {
 export function MenuItemsList({ postID }: IMenuItemsListProps ) {
   return (
     <ul className={styles.menuItemsLink}>
-      <li onClick={() => console.log(postID)} className={styles.menuItemDesk}>
+      <li onClick={() => console.log(postID)} className={styles.menuItemTablet}>
         <Icon name={EIcons.comment} size={16}/>
         <Text size={12} color={EColors.gray99}>Комментарии</Text>
       </li>
 
-      <div className={styles.dividerDesk}/>
+      <div className={styles.dividerTablet}/>
         
-      <li onClick={() => console.log(postID)} className={styles.menuItemDesk}>
+      <li onClick={() => console.log(postID)} className={styles.menuItemTablet}>
         <Icon name={EIcons.share} size={16}/>
         <Text size={12} color={EColors.gray99}>Поделиться</Text>
       </li>
 
-      <div className={styles.dividerDesk}/>
+      <div className={styles.dividerTablet}/>
       
       <li onClick={() => console.log(postID)} className={styles.menuItem}>
         <Icon name={EIcons.block} size={16}/>
@@ -34,12 +34,12 @@ export function MenuItemsList({ postID }: IMenuItemsListProps ) {
 
       <div className={styles.divider}/>
 
-      <li className={styles.menuItemDesk}>
+      <li className={styles.menuItemTablet}>
         <Icon name={EIcons.save} size={16}/>
         <Text size={12} color={EColors.gray99}>Сохронить</Text>
       </li>
 
-      <div className={styles.dividerDesk}/>
+      <div className={styles.dividerTablet}/>
 
       <li className={styles.menuItem}>
         <Icon name={EIcons.warning} size={16}/>

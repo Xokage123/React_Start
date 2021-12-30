@@ -1,20 +1,29 @@
 import React from 'react';
-import { usePostsData } from '../../../hooks/usePostsData';
+import { generateRandomString } from '../../utils/React/generateRandomIndex';
 import styles from './card.scss';
 import { Controls } from './Controls';
 import { Menu } from './Menu';
 import { Preview } from './Preview';
 import { TextContent } from './TextContent';
 
-export function Card() {
-   const dataa = usePostsData()
+interface ICardProps {
+  id: string;
+  username?: string;
+  title?: string;
+  score?: number;
+  num_comments?: number;
+}
+
+export function Card(props: ICardProps) {
+  
+  const { id, username, title, score, num_comments } = props;
 
   return (
-   <li className={ styles.card }>
-     <TextContent /> 
+   <li className={ styles.card } key={id}>
+     <TextContent username={username} title={title} /> 
      <Preview />
      <Menu />
-     <Controls />
+     <Controls score={score} num_comments={num_comments}/>
    </li>
   );
 }

@@ -1,7 +1,7 @@
 @import '../../../variables';
 @media all and (min-width: 1024px) {
   div.menu {
-    top: 73px;
+    top: 40%;
     right: 6%;
   }
   button.closeButton {
@@ -13,8 +13,12 @@
 }
 @media all and (min-width: 1540px) {
   div.menu {
-    top: 73px;
+    top: 40%;
     right: 9%;
+  }
+
+  button.closeButton {
+    display: none;
   }
 }
 .menu {

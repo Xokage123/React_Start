@@ -7,21 +7,24 @@ import { Content } from './Content';
 import { CardList } from './CardList';
 import { useToken } from '../hooks/useToken'
 import { tokenContext } from './context/tokenContaxt';
-import { userContext } from './context/userContext';
 import { UserContextProvider } from './context/userContext';
+import { PostsDataContextProvider } from './context/postsDataContext';
 
 export function App() {
    const [token] = useToken(); 
 
+
    return (
     <tokenContext.Provider value={token}>
        <UserContextProvider>
-          <Layout >
-            <Header />
-            <Content>
-              <CardList />
-            </Content>
-          </Layout> 
+         <PostsDataContextProvider>
+            <Layout >
+               <Header />
+               <Content>
+               <CardList />
+               </Content>
+            </Layout> 
+         </PostsDataContextProvider>
        </UserContextProvider>
     </tokenContext.Provider>
    )

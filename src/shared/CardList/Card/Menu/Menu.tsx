@@ -8,24 +8,11 @@ import { MenuIcon } from '../../../Icons/MenuIcon';
 import { MenuItemsList } from './MenuItemsList';
 import { Text, EColors} from '../../../Text/Text';
 
-const LIST = [
-  { title: 'Rising', class: 'dropItem' },
-  { title: 'Powerups', class: 'icon-powerup' },
-  { title: 'Premium', class: 'icon-premium' },
-  { title: 'Talk', class: 'dropItem' },
-  { title: 'Predictions', class: 'dropItem' },
-  { title: 'Help Center', class: '' },
-].map(generateId);
 
 
 export function Menu() {
   const [mainButton, setMainButton] = React.useState('Rising')
 
-  const handleClick = (id: string) => {
-    const newList = LIST.filter((item) => item.id == id);
-    const [newItem] = newList
-    setMainButton(newItem.title)
-  }
 
   return (
     <div className={styles.menu}>

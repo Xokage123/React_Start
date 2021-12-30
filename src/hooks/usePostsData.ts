@@ -2,10 +2,6 @@ import * as React from 'react';
 import axios from 'axios';
 import { tokenContext } from '../shared/context/tokenContaxt';
 
-interface I {
-  name?: string;
-  iconImg?: string;
-}
 
 export function usePostsData() {
   const token = React.useContext(tokenContext);
@@ -15,10 +11,11 @@ export function usePostsData() {
       headers: { Authorization: `bearer ${token}`}
     })
       .then((resp) => {
-        const postsData = resp.data.children
-        setPostsData(postsData)
+        const data = resp.data.data.children.map( (item: { kind: string , data: {[N: string]: any}}) => item.data);
+        const postsData = data.map((item: {[N: string]: any}) => ({ title: item.title, username: item.name, score: item.score, num_comments: item.num_comments, id: item.id, created: item.created }));
+        setPostsData(postsData);
       })
   }, [token])
-
-  return [postsData]
+  
+  return postsData 
 }
