@@ -10,12 +10,15 @@ export function CardList() {
   return (
     <ul className={styles.cardList}>
       {postsData.map((item: {[N: string]: any}) => (
-        <Card key={generateRandomString()} id={item.id}
+        <Card 
+        key={generateRandomString()} 
+        id={item.id}
         username={item.username}
         title={item.title}
         score={item.score}
         num_comments={item.num_comments}
         thumbnail={item.thumbnail}
-        created={item.created}/>))}
+        created={item.created}
+        />))}
     </ul>)
 }

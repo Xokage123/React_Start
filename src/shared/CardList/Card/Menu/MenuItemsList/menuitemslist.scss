@@ -59,6 +59,7 @@
 
 @media all and (min-width: 1540px) {
     .menuItem:hover {
+        cursor: pointer;
         span {
             color: #CC6633;
         };
@@ -67,6 +68,7 @@
         }
     }
     .menuItemTablet:hover {
+        cursor: pointer;
         span {
             color: #CC6633;
         };

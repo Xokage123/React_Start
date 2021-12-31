@@ -24,10 +24,12 @@ export function Card(props: ICardProps) {
   
   let unix_timestamp = created
   let date = new Date(unix_timestamp * 1000);
-  let hours = date.getHours();
+  let hours = "0" + date.getHours();
   let minutes = "0" + date.getMinutes();
+  let month = date.getMonth();
+  let day = date.getDay();
   let year = date.getFullYear();
-  let formattedTime = hours + ':' + minutes.substr(-2) + ' ' + year + 'year'; 
+  let formattedTime = hours.substr(-2) + ':' + minutes.substr(-2) + ' ' + day + '.' + month + '.' + year; 
 
   return (
    <li className={ styles.card } key={id}>
