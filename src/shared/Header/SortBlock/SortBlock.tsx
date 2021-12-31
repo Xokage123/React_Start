@@ -1,9 +1,9 @@
 import React from 'react';
 import { Dropdown } from '../../Dropdown';
 import { Feed } from './List';
-import { merge } from '../../utils/js/merge';
 import { generateId } from '../../utils/React/generateRandomIndex';
 import styles from './sortblock.scss';
+import { merge } from '../../utils/js/merge';
 
 let LIST = [
   { title: 'Everywhere', class: 'dropItem'},
@@ -21,6 +21,7 @@ let LIST = [
 
 export function SortBlock() {
   const [mainButton, setMainButton] = React.useState('Everywhere');
+  
   const handleClick = (id: string) => {
     const newList = LIST.filter((item) => item.id == id);
     const [newItem] = newList
