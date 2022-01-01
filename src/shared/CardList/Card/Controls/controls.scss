@@ -1,40 +1,11 @@
 @import '../../../variables';
 @media all and (min-width: 1024px) {
-  .actions {
-    display: none;
-  }
-  .commentsButton {
-    display: none !important;
-  }
-  .karmaValue {
-    font-size: 14px;
-    line-height: 16px;
-    color: $black;
-  }
-  div.karmaCounter > * + * {
-    padding: 7px 0 0;
-  }
-  .karmaCounter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column nowrap;
-  }
-  .karmaCounter > button.up:hover > svg > path {
-    fill: $green;
-  }
-  .karmaCounter > button.down:hover > svg > path {
-    fill: $orange;
-  }
   .controls {
     order: 3;
     flex: 0 0;
     margin: 0 0 0 24px;
     padding: 0;
     position: relative;
-  }
-  .commentsButton {
-    display: none;
   }
 }
 .controls {
@@ -43,29 +14,11 @@
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-.karmaCounter > * + * {
-  padding: 0 0 0 4px; 
-}
-svg.down {
-  transform: rotate(180deg);
-}
-.commentsButton {
-  display: flex;
-  align-items: normal;
-}
-.commentsButton * {
-  color: $greyC4;
-}
-.commentsNumber {
-  padding: 0 0 0 6px;
-  font-size: 12px;
-  line-height: 14px;
-}
-.shareButton{
-  width: 20px;
-  height: 20px;
-}
-.saveButton {
-  width: 30px;
-  height: 30px;
+
+.controls-modal {
+  order: 1;
+  flex: 0 0;
+  margin: 0 24px 0 0;
+  padding: 0;
+  position: relative;
 }

@@ -2,16 +2,21 @@ import React from 'react';
 import { generateRandomString } from '../../utils/React/generateRandomIndex';
 import styles from './card.scss';
 import { Controls } from './Controls';
+import { Actions } from './Controls/Actions';
+import { CommentsButton } from './Controls/CommentsButton';
+import { KarmaCounter } from './Controls/KarmaCounter';
 import { Menu } from './Menu';
 import { Preview } from './Preview';
 import { TextContent } from './TextContent';
+import { Title } from './TextContent/Title';
+import { Post } from './TextContent/Title/Post';
 
 interface ICardProps {
   id: string;
-  username?: string;
-  title?: string;
-  score?: number;
-  num_comments?: number;
+  username: string;
+  title: string;
+  score: number;
+  num_comments: number;
   thumbnail: string;
   created: number;
 }
@@ -33,10 +38,18 @@ export function Card(props: ICardProps) {
 
   return (
    <li className={ styles.card } key={id}>
-     <TextContent username={username} title={title} date={formattedTime}/> 
+     <TextContent username={username}  date={formattedTime} >
+      <Title title={title}>
+        <Post score={score} username={username} date={formattedTime} title={title}/>
+      </Title>
+     </TextContent> 
      <Preview thumbnail={thumbnail} />
      <Menu />
-     <Controls score={score} num_comments={num_comments}/>
+     <Controls>
+       <KarmaCounter score={score}/>
+       <CommentsButton num_comments={num_comments}/>
+       <Actions />
+     </Controls>
    </li>
   );
 }

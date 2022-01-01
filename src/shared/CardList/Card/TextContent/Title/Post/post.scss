@@ -1,0 +1,32 @@
+@import '../../../../../variables';
+.modal {
+  padding: 50px 60px;
+  position: absolute;
+  width: 960px;
+  height: 960px;
+  left: 480px;
+  top: 281px;
+  background: $white;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+  z-index: 3;
+}
+.title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: $black;
+}
+.content {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+}
+.header {
+  display: flex;
+}

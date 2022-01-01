@@ -142,7 +142,7 @@ eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.indexTemplate = (content, token) => `\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Reddit</title>\r\n  <script src=\"/static/client.js\" type=\"application/javascript\"></script>\r\n  <script>\r\n   window.__token__ = '${token}'\r\n  </script>\r\n</head>\r\n<body>\r\n  <div id=\"react_root\">${content}</div>\r\n</body>\r\n</html>\r\n`;\r\n\n\n//# sourceURL=webpack:///./src/server/indexTemplate.js?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.indexTemplate = (content, token) => `\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Reddit</title>\r\n  <script src=\"/static/client.js\" type=\"application/javascript\"></script>\r\n  <script>\r\n   window.__token__ = '${token}'\r\n  </script>\r\n</head>\r\n<body>\r\n  <div id=\"react_root\">${content}</div>\r\n  <div id=\"modal_root\"></div>\r\n</body>\r\n</html>\r\n`;\r\n\n\n//# sourceURL=webpack:///./src/server/indexTemplate.js?");
 
 /***/ }),
 
@@ -166,7 +166,7 @@ eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod)
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nconst Layout_1 = __webpack_require__(/*! ./Layout/Layout */ \"./src/shared/Layout/Layout.tsx\");\r\n__webpack_require__(/*! ./main.global.scss */ \"./src/shared/main.global.scss\");\r\nconst Header_1 = __webpack_require__(/*! ./Header */ \"./src/shared/Header/index.ts\");\r\nconst Content_1 = __webpack_require__(/*! ./Content */ \"./src/shared/Content/index.ts\");\r\nconst CardList_1 = __webpack_require__(/*! ./CardList */ \"./src/shared/CardList/index.ts\");\r\nconst useToken_1 = __webpack_require__(/*! ../hooks/useToken */ \"./src/hooks/useToken.ts\");\r\nconst tokenContaxt_1 = __webpack_require__(/*! ./context/tokenContaxt */ \"./src/shared/context/tokenContaxt.ts\");\r\nconst userContext_1 = __webpack_require__(/*! ./context/userContext */ \"./src/shared/context/userContext.tsx\");\r\nconst postsDataContext_1 = __webpack_require__(/*! ./context/postsDataContext */ \"./src/shared/context/postsDataContext.tsx\");\r\nfunction App() {\r\n    const [token] = useToken_1.useToken();\r\n    return (React.createElement(tokenContaxt_1.tokenContext.Provider, { value: token },\r\n        React.createElement(userContext_1.UserContextProvider, null,\r\n            React.createElement(postsDataContext_1.PostsDataContextProvider, null,\r\n                React.createElement(Layout_1.Layout, null,\r\n                    React.createElement(Header_1.Header, null),\r\n                    React.createElement(Content_1.Content, null,\r\n                        React.createElement(CardList_1.CardList, null)))))));\r\n}\r\nexports.App = App;\r\n\n\n//# sourceURL=webpack:///./src/shared/App.tsx?");
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst React = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nconst Layout_1 = __webpack_require__(/*! ./Layout/Layout */ \"./src/shared/Layout/Layout.tsx\");\r\n__webpack_require__(/*! ./main.global.scss */ \"./src/shared/main.global.scss\");\r\nconst Header_1 = __webpack_require__(/*! ./Header */ \"./src/shared/Header/index.ts\");\r\nconst Content_1 = __webpack_require__(/*! ./Content */ \"./src/shared/Content/index.ts\");\r\nconst CardList_1 = __webpack_require__(/*! ./CardList */ \"./src/shared/CardList/index.ts\");\r\nconst useToken_1 = __webpack_require__(/*! ../hooks/useToken */ \"./src/hooks/useToken.ts\");\r\nconst tokenContaxt_1 = __webpack_require__(/*! ./context/tokenContaxt */ \"./src/shared/context/tokenContaxt.ts\");\r\nconst userContext_1 = __webpack_require__(/*! ./context/userContext */ \"./src/shared/context/userContext.tsx\");\r\nconst postsDataContext_1 = __webpack_require__(/*! ./context/postsDataContext */ \"./src/shared/context/postsDataContext.tsx\");\r\nconst Button_1 = __importDefault(__webpack_require__(/*! react-bootstrap/Button */ \"react-bootstrap/Button\"));\r\n__webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"bootstrap/dist/css/bootstrap.min.css\");\r\nfunction App() {\r\n    const [token] = useToken_1.useToken();\r\n    return (React.createElement(tokenContaxt_1.tokenContext.Provider, { value: token },\r\n        React.createElement(userContext_1.UserContextProvider, null,\r\n            React.createElement(postsDataContext_1.PostsDataContextProvider, null,\r\n                React.createElement(Layout_1.Layout, null,\r\n                    React.createElement(Header_1.Header, null),\r\n                    React.createElement(Button_1.default, null, \"asdas\"),\r\n                    React.createElement(Content_1.Content, null,\r\n                        React.createElement(CardList_1.CardList, null)))))));\r\n}\r\nexports.App = App;\r\n\n\n//# sourceURL=webpack:///./src/shared/App.tsx?");
 
 /***/ }),
 
@@ -213,7 +213,77 @@ eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProp
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst card_scss_1 = __importDefault(__webpack_require__(/*! ./card.scss */ \"./src/shared/CardList/Card/card.scss\"));\r\nconst Controls_1 = __webpack_require__(/*! ./Controls */ \"./src/shared/CardList/Card/Controls/index.ts\");\r\nconst Menu_1 = __webpack_require__(/*! ./Menu */ \"./src/shared/CardList/Card/Menu/index.ts\");\r\nconst Preview_1 = __webpack_require__(/*! ./Preview */ \"./src/shared/CardList/Card/Preview/index.ts\");\r\nconst TextContent_1 = __webpack_require__(/*! ./TextContent */ \"./src/shared/CardList/Card/TextContent/index.ts\");\r\nfunction Card(props) {\r\n    const { id, username, title, score, num_comments, thumbnail, created } = props;\r\n    const createdAt = new Date(created);\r\n    let unix_timestamp = created;\r\n    let date = new Date(unix_timestamp * 1000);\r\n    let hours = \"0\" + date.getHours();\r\n    let minutes = \"0\" + date.getMinutes();\r\n    let month = date.getMonth();\r\n    let day = date.getDay();\r\n    let year = date.getFullYear();\r\n    let formattedTime = hours.substr(-2) + ':' + minutes.substr(-2) + ' ' + day + '.' + month + '.' + year;\r\n    return (react_1.default.createElement(\"li\", { className: card_scss_1.default.card, key: id },\r\n        react_1.default.createElement(TextContent_1.TextContent, { username: username, title: title, date: formattedTime }),\r\n        react_1.default.createElement(Preview_1.Preview, { thumbnail: thumbnail }),\r\n        react_1.default.createElement(Menu_1.Menu, null),\r\n        react_1.default.createElement(Controls_1.Controls, { score: score, num_comments: num_comments })));\r\n}\r\nexports.Card = Card;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Card.tsx?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst card_scss_1 = __importDefault(__webpack_require__(/*! ./card.scss */ \"./src/shared/CardList/Card/card.scss\"));\r\nconst Controls_1 = __webpack_require__(/*! ./Controls */ \"./src/shared/CardList/Card/Controls/index.ts\");\r\nconst Actions_1 = __webpack_require__(/*! ./Controls/Actions */ \"./src/shared/CardList/Card/Controls/Actions/index.ts\");\r\nconst CommentsButton_1 = __webpack_require__(/*! ./Controls/CommentsButton */ \"./src/shared/CardList/Card/Controls/CommentsButton/index.ts\");\r\nconst KarmaCounter_1 = __webpack_require__(/*! ./Controls/KarmaCounter */ \"./src/shared/CardList/Card/Controls/KarmaCounter/index.ts\");\r\nconst Menu_1 = __webpack_require__(/*! ./Menu */ \"./src/shared/CardList/Card/Menu/index.ts\");\r\nconst Preview_1 = __webpack_require__(/*! ./Preview */ \"./src/shared/CardList/Card/Preview/index.ts\");\r\nconst TextContent_1 = __webpack_require__(/*! ./TextContent */ \"./src/shared/CardList/Card/TextContent/index.ts\");\r\nconst Title_1 = __webpack_require__(/*! ./TextContent/Title */ \"./src/shared/CardList/Card/TextContent/Title/index.ts\");\r\nconst Post_1 = __webpack_require__(/*! ./TextContent/Title/Post */ \"./src/shared/CardList/Card/TextContent/Title/Post/index.ts\");\r\nfunction Card(props) {\r\n    const { id, username, title, score, num_comments, thumbnail, created } = props;\r\n    const createdAt = new Date(created);\r\n    let unix_timestamp = created;\r\n    let date = new Date(unix_timestamp * 1000);\r\n    let hours = \"0\" + date.getHours();\r\n    let minutes = \"0\" + date.getMinutes();\r\n    let month = date.getMonth();\r\n    let day = date.getDay();\r\n    let year = date.getFullYear();\r\n    let formattedTime = hours.substr(-2) + ':' + minutes.substr(-2) + ' ' + day + '.' + month + '.' + year;\r\n    return (react_1.default.createElement(\"li\", { className: card_scss_1.default.card, key: id },\r\n        react_1.default.createElement(TextContent_1.TextContent, { username: username, date: formattedTime },\r\n            react_1.default.createElement(Title_1.Title, { title: title },\r\n                react_1.default.createElement(Post_1.Post, { score: score, username: username, date: formattedTime, title: title }))),\r\n        react_1.default.createElement(Preview_1.Preview, { thumbnail: thumbnail }),\r\n        react_1.default.createElement(Menu_1.Menu, null),\r\n        react_1.default.createElement(Controls_1.Controls, null,\r\n            react_1.default.createElement(KarmaCounter_1.KarmaCounter, { score: score }),\r\n            react_1.default.createElement(CommentsButton_1.CommentsButton, { num_comments: num_comments }),\r\n            react_1.default.createElement(Actions_1.Actions, null))));\r\n}\r\nexports.Card = Card;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Card.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/Controls/Actions/Actions.tsx":
+/*!***************************************************************!*\
+  !*** ./src/shared/CardList/Card/Controls/Actions/Actions.tsx ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst actions_scss_1 = __importDefault(__webpack_require__(/*! ./actions.scss */ \"./src/shared/CardList/Card/Controls/Actions/actions.scss\"));\r\nfunction Actions() {\r\n    return (react_1.default.createElement(\"div\", { className: actions_scss_1.default.actions },\r\n        react_1.default.createElement(\"button\", { className: actions_scss_1.default.shareButton },\r\n            react_1.default.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", width: \"20\", height: \"20\", viewBox: \"0 0 20 20\", fill: \"none\" },\r\n                react_1.default.createElement(\"circle\", { cx: \"10\", cy: \"10\", r: \"10\", fill: \"#C4C4C4\" }),\r\n                react_1.default.createElement(\"path\", { d: \"M11.6667 12.0683C11.3289 12.0683 11.0267 12.2189 10.7956 12.4548L7.62667 10.3715C7.64889 10.256 7.66667 10.1406 7.66667 10.0201C7.66667 9.8996 7.64889 9.78414 7.62667 9.66867L10.76 7.60542C11 7.85643 11.3156 8.01205 11.6667 8.01205C12.4044 8.01205 13 7.33936 13 6.50602C13 5.67269 12.4044 5 11.6667 5C10.9289 5 10.3333 5.67269 10.3333 6.50602C10.3333 6.62651 10.3511 6.74197 10.3733 6.85743L7.24 8.92068C7 8.66968 6.68444 8.51406 6.33333 8.51406C5.59556 8.51406 5 9.18675 5 10.0201C5 10.8534 5.59556 11.5261 6.33333 11.5261C6.68444 11.5261 7 11.3705 7.24 11.1195L10.4044 13.2078C10.3822 13.3133 10.3689 13.4237 10.3689 13.5341C10.3689 14.3424 10.9511 15 11.6667 15C12.3822 15 12.9644 14.3424 12.9644 13.5341C12.9644 12.7259 12.3822 12.0683 11.6667 12.0683Z\", fill: \"white\" }))),\r\n        react_1.default.createElement(\"button\", { className: actions_scss_1.default.saveButton },\r\n            react_1.default.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", width: \"20\", height: \"20\", viewBox: \"0 0 20 20\", fill: \"none\" },\r\n                react_1.default.createElement(\"circle\", { cx: \"10\", cy: \"10\", r: \"10\", fill: \"#C4C4C4\" }),\r\n                react_1.default.createElement(\"path\", { d: \"M6 7H5V14C5 14.55 5.45 15 6 15H13V14H6V7ZM14 5H8C7.45 5 7 5.45 7 6V12C7 12.55 7.45 13 8 13H14C14.55 13 15 12.55 15 12V6C15 5.45 14.55 5 14 5ZM13.5 9.5H11.5V11.5H10.5V9.5H8.5V8.5H10.5V6.5H11.5V8.5H13.5V9.5Z\", fill: \"white\" })))));\r\n}\r\nexports.Actions = Actions;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Controls/Actions/Actions.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/Controls/Actions/actions.scss":
+/*!****************************************************************!*\
+  !*** ./src/shared/CardList/Card/Controls/Actions/actions.scss ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"shareButton\": \"actions__shareButton--3jy6e\",\n\t\"saveButton\": \"actions__saveButton--2Hq4Z\",\n\t\"actions\": \"actions__actions--3b2kc\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Controls/Actions/actions.scss?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/Controls/Actions/index.ts":
+/*!************************************************************!*\
+  !*** ./src/shared/CardList/Card/Controls/Actions/index.ts ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\r\n}\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\n__export(__webpack_require__(/*! ./Actions */ \"./src/shared/CardList/Card/Controls/Actions/Actions.tsx\"));\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Controls/Actions/index.ts?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/Controls/CommentsButton/CommentsButton.tsx":
+/*!*****************************************************************************!*\
+  !*** ./src/shared/CardList/Card/Controls/CommentsButton/CommentsButton.tsx ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst commentsbutton_scss_1 = __importDefault(__webpack_require__(/*! ./commentsbutton.scss */ \"./src/shared/CardList/Card/Controls/CommentsButton/commentsbutton.scss\"));\r\nfunction CommentsButton({ num_comments }) {\r\n    return (react_1.default.createElement(\"button\", { className: commentsbutton_scss_1.default.commentsButton },\r\n        react_1.default.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", width: \"15\", height: \"15\", viewBox: \"0 0 15 15\", fill: \"none\" },\r\n            react_1.default.createElement(\"path\", { d: \"M12.75 0H1.41667C0.6375 0 0 0.6375 0 1.41667V9.91667C0 10.6958 0.6375 11.3333 1.41667 11.3333H11.3333L14.1667 14.1667V1.41667C14.1667 0.6375 13.5292 0 12.75 0ZM11.3333 8.5H2.83333V7.08333H11.3333V8.5ZM11.3333 6.375H2.83333V4.95833H11.3333V6.375ZM11.3333 4.25H2.83333V2.83333H11.3333V4.25Z\", fill: \"#C4C4C4\" })),\r\n        react_1.default.createElement(\"span\", { className: commentsbutton_scss_1.default.commentsNumber }, num_comments)));\r\n}\r\nexports.CommentsButton = CommentsButton;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Controls/CommentsButton/CommentsButton.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/Controls/CommentsButton/commentsbutton.scss":
+/*!******************************************************************************!*\
+  !*** ./src/shared/CardList/Card/Controls/CommentsButton/commentsbutton.scss ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"commentsButton\": \"commentsbutton__commentsButton--1g156\",\n\t\"commentsNumber\": \"commentsbutton__commentsNumber--1ClmV\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Controls/CommentsButton/commentsbutton.scss?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/Controls/CommentsButton/index.ts":
+/*!*******************************************************************!*\
+  !*** ./src/shared/CardList/Card/Controls/CommentsButton/index.ts ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\r\n}\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\n__export(__webpack_require__(/*! ./CommentsButton */ \"./src/shared/CardList/Card/Controls/CommentsButton/CommentsButton.tsx\"));\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Controls/CommentsButton/index.ts?");
 
 /***/ }),
 
@@ -225,7 +295,42 @@ eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod)
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst controls_scss_1 = __importDefault(__webpack_require__(/*! ./controls.scss */ \"./src/shared/CardList/Card/Controls/controls.scss\"));\r\nfunction Controls(props) {\r\n    const { score, num_comments } = props;\r\n    return (react_1.default.createElement(\"div\", { className: controls_scss_1.default.controls },\r\n        react_1.default.createElement(\"div\", { className: controls_scss_1.default.karmaCounter },\r\n            react_1.default.createElement(\"button\", { className: controls_scss_1.default.up },\r\n                react_1.default.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", width: \"19\", height: \"10\", viewBox: \"0 0 19 10\", fill: \"none\" },\r\n                    react_1.default.createElement(\"path\", { d: \"M9.5 0L0 10H19L9.5 0Z\", fill: \"#C4C4C4\" }))),\r\n            react_1.default.createElement(\"span\", { className: controls_scss_1.default.karmaValue }, score),\r\n            react_1.default.createElement(\"button\", { className: controls_scss_1.default.down },\r\n                react_1.default.createElement(\"svg\", { className: controls_scss_1.default.down, xmlns: \"http://www.w3.org/2000/svg\", width: \"19\", height: \"10\", viewBox: \"0 0 19 10\", fill: \"none\" },\r\n                    react_1.default.createElement(\"path\", { d: \"M9.5 0L0 10H19L9.5 0Z\", fill: \"#C4C4C4\" })))),\r\n        react_1.default.createElement(\"button\", { className: controls_scss_1.default.commentsButton },\r\n            react_1.default.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", width: \"15\", height: \"15\", viewBox: \"0 0 15 15\", fill: \"none\" },\r\n                react_1.default.createElement(\"path\", { d: \"M12.75 0H1.41667C0.6375 0 0 0.6375 0 1.41667V9.91667C0 10.6958 0.6375 11.3333 1.41667 11.3333H11.3333L14.1667 14.1667V1.41667C14.1667 0.6375 13.5292 0 12.75 0ZM11.3333 8.5H2.83333V7.08333H11.3333V8.5ZM11.3333 6.375H2.83333V4.95833H11.3333V6.375ZM11.3333 4.25H2.83333V2.83333H11.3333V4.25Z\", fill: \"#C4C4C4\" })),\r\n            react_1.default.createElement(\"span\", { className: controls_scss_1.default.commentsNumber }, num_comments)),\r\n        react_1.default.createElement(\"div\", { className: controls_scss_1.default.actions },\r\n            react_1.default.createElement(\"button\", { className: controls_scss_1.default.shareButton },\r\n                react_1.default.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", width: \"20\", height: \"20\", viewBox: \"0 0 20 20\", fill: \"none\" },\r\n                    react_1.default.createElement(\"circle\", { cx: \"10\", cy: \"10\", r: \"10\", fill: \"#C4C4C4\" }),\r\n                    react_1.default.createElement(\"path\", { d: \"M11.6667 12.0683C11.3289 12.0683 11.0267 12.2189 10.7956 12.4548L7.62667 10.3715C7.64889 10.256 7.66667 10.1406 7.66667 10.0201C7.66667 9.8996 7.64889 9.78414 7.62667 9.66867L10.76 7.60542C11 7.85643 11.3156 8.01205 11.6667 8.01205C12.4044 8.01205 13 7.33936 13 6.50602C13 5.67269 12.4044 5 11.6667 5C10.9289 5 10.3333 5.67269 10.3333 6.50602C10.3333 6.62651 10.3511 6.74197 10.3733 6.85743L7.24 8.92068C7 8.66968 6.68444 8.51406 6.33333 8.51406C5.59556 8.51406 5 9.18675 5 10.0201C5 10.8534 5.59556 11.5261 6.33333 11.5261C6.68444 11.5261 7 11.3705 7.24 11.1195L10.4044 13.2078C10.3822 13.3133 10.3689 13.4237 10.3689 13.5341C10.3689 14.3424 10.9511 15 11.6667 15C12.3822 15 12.9644 14.3424 12.9644 13.5341C12.9644 12.7259 12.3822 12.0683 11.6667 12.0683Z\", fill: \"white\" }))),\r\n            react_1.default.createElement(\"button\", { className: controls_scss_1.default.saveButton },\r\n                react_1.default.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", width: \"20\", height: \"20\", viewBox: \"0 0 20 20\", fill: \"none\" },\r\n                    react_1.default.createElement(\"circle\", { cx: \"10\", cy: \"10\", r: \"10\", fill: \"#C4C4C4\" }),\r\n                    react_1.default.createElement(\"path\", { d: \"M6 7H5V14C5 14.55 5.45 15 6 15H13V14H6V7ZM14 5H8C7.45 5 7 5.45 7 6V12C7 12.55 7.45 13 8 13H14C14.55 13 15 12.55 15 12V6C15 5.45 14.55 5 14 5ZM13.5 9.5H11.5V11.5H10.5V9.5H8.5V8.5H10.5V6.5H11.5V8.5H13.5V9.5Z\", fill: \"white\" }))))));\r\n}\r\nexports.Controls = Controls;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Controls/Controls.tsx?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst controls_scss_1 = __importDefault(__webpack_require__(/*! ./controls.scss */ \"./src/shared/CardList/Card/Controls/controls.scss\"));\r\nfunction Controls({ className = 'controls', children }) {\r\n    return (react_1.default.createElement(\"div\", { className: controls_scss_1.default[className] }, children));\r\n}\r\nexports.Controls = Controls;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Controls/Controls.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/Controls/KarmaCounter/KarmaCounter.tsx":
+/*!*************************************************************************!*\
+  !*** ./src/shared/CardList/Card/Controls/KarmaCounter/KarmaCounter.tsx ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst karmacounter_scss_1 = __importDefault(__webpack_require__(/*! ./karmacounter.scss */ \"./src/shared/CardList/Card/Controls/KarmaCounter/karmacounter.scss\"));\r\nfunction KarmaCounter({ score }) {\r\n    return (react_1.default.createElement(\"div\", { className: karmacounter_scss_1.default.karmaCounter },\r\n        react_1.default.createElement(\"button\", { className: karmacounter_scss_1.default.up },\r\n            react_1.default.createElement(\"svg\", { xmlns: \"http://www.w3.org/2000/svg\", width: \"19\", height: \"10\", viewBox: \"0 0 19 10\", fill: \"none\" },\r\n                react_1.default.createElement(\"path\", { d: \"M9.5 0L0 10H19L9.5 0Z\", fill: \"#C4C4C4\" }))),\r\n        react_1.default.createElement(\"span\", { className: karmacounter_scss_1.default.karmaValue }, score),\r\n        react_1.default.createElement(\"button\", { className: karmacounter_scss_1.default.down },\r\n            react_1.default.createElement(\"svg\", { className: karmacounter_scss_1.default.down, xmlns: \"http://www.w3.org/2000/svg\", width: \"19\", height: \"10\", viewBox: \"0 0 19 10\", fill: \"none\" },\r\n                react_1.default.createElement(\"path\", { d: \"M9.5 0L0 10H19L9.5 0Z\", fill: \"#C4C4C4\" })))));\r\n}\r\nexports.KarmaCounter = KarmaCounter;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Controls/KarmaCounter/KarmaCounter.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/Controls/KarmaCounter/index.ts":
+/*!*****************************************************************!*\
+  !*** ./src/shared/CardList/Card/Controls/KarmaCounter/index.ts ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\r\n}\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\n__export(__webpack_require__(/*! ./KarmaCounter */ \"./src/shared/CardList/Card/Controls/KarmaCounter/KarmaCounter.tsx\"));\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Controls/KarmaCounter/index.ts?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/Controls/KarmaCounter/karmacounter.scss":
+/*!**************************************************************************!*\
+  !*** ./src/shared/CardList/Card/Controls/KarmaCounter/karmacounter.scss ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"karmaCounter\": \"karmacounter__karmaCounter--C3LEv\",\n\t\"down\": \"karmacounter__down--jOmVn\",\n\t\"karmaValue\": \"karmacounter__karmaValue--2SpQL\",\n\t\"up\": \"karmacounter__up--OZkNa\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Controls/KarmaCounter/karmacounter.scss?");
 
 /***/ }),
 
@@ -236,7 +341,7 @@ eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod)
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// Exports\nmodule.exports = {\n\t\"actions\": \"controls__actions--3Yr7Y\",\n\t\"commentsButton\": \"controls__commentsButton--2np_t\",\n\t\"karmaValue\": \"controls__karmaValue--2EWKm\",\n\t\"karmaCounter\": \"controls__karmaCounter--1EUdq\",\n\t\"up\": \"controls__up--V_4b5\",\n\t\"down\": \"controls__down--4xOxC\",\n\t\"controls\": \"controls__controls--2oCbL\",\n\t\"commentsNumber\": \"controls__commentsNumber--3ua6g\",\n\t\"shareButton\": \"controls__shareButton--15quJ\",\n\t\"saveButton\": \"controls__saveButton--2Im-p\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Controls/controls.scss?");
+eval("// Exports\nmodule.exports = {\n\t\"controls\": \"controls__controls--2oCbL\",\n\t\"controls-modal\": \"controls__controls-modal--2WUcs\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Controls/controls.scss?");
 
 /***/ }),
 
@@ -330,7 +435,7 @@ eval("// Exports\nmodule.exports = {\n\t\"menu\": \"menu__menu--3ALMa\",\n\t\"cl
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst preview_scss_1 = __importDefault(__webpack_require__(/*! ./preview.scss */ \"./src/shared/CardList/Card/Preview/preview.scss\"));\r\nfunction Preview(props) {\r\n    const { thumbnail } = props;\r\n    if (thumbnail == undefined)\r\n        return null;\r\n    if (!(thumbnail.endsWith('.jpg'))) {\r\n        return null;\r\n    }\r\n    return (react_1.default.createElement(\"div\", { className: preview_scss_1.default.preview },\r\n        react_1.default.createElement(\"img\", { className: preview_scss_1.default.previewImg, src: thumbnail })));\r\n}\r\nexports.Preview = Preview;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Preview/Preview.tsx?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst preview_scss_1 = __importDefault(__webpack_require__(/*! ./preview.scss */ \"./src/shared/CardList/Card/Preview/preview.scss\"));\r\nfunction Preview(props) {\r\n    const { thumbnail } = props;\r\n    if (!(thumbnail.endsWith('.jpg'))) {\r\n        return null;\r\n    }\r\n    return (react_1.default.createElement(\"div\", { className: preview_scss_1.default.preview },\r\n        react_1.default.createElement(\"img\", { className: preview_scss_1.default.previewImg, src: thumbnail })));\r\n}\r\nexports.Preview = Preview;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Preview/Preview.tsx?");
 
 /***/ }),
 
@@ -365,7 +470,77 @@ eval("// Exports\nmodule.exports = {\n\t\"preview\": \"preview__preview--3v8sd\"
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst textcontent_scss_1 = __importDefault(__webpack_require__(/*! ./textcontent.scss */ \"./src/shared/CardList/Card/TextContent/textcontent.scss\"));\r\nfunction TextContent(props) {\r\n    const { username, title, date } = props;\r\n    return (react_1.default.createElement(\"div\", { className: textcontent_scss_1.default.textContent },\r\n        react_1.default.createElement(\"div\", { className: textcontent_scss_1.default.metaData },\r\n            react_1.default.createElement(\"div\", { className: textcontent_scss_1.default.userLink },\r\n                react_1.default.createElement(\"img\", { className: textcontent_scss_1.default.avatar, src: \"https://i.redd.it/snk96iikvra51.png\", alt: \"avatar\" }),\r\n                react_1.default.createElement(\"a\", { href: \"#user-url\", className: textcontent_scss_1.default.username }, username)),\r\n            react_1.default.createElement(\"span\", { className: textcontent_scss_1.default.createdAt },\r\n                react_1.default.createElement(\"span\", { className: textcontent_scss_1.default.publishedLabel }, \"\\u041E\\u043F\\u0443\\u0431\\u043B\\u0438\\u043A\\u043E\\u0432\\u0430\\u043D\\u043E\"),\r\n                \" \",\r\n                date)),\r\n        react_1.default.createElement(\"h2\", { className: textcontent_scss_1.default.title },\r\n            react_1.default.createElement(\"a\", { href: \"#post-url\", className: textcontent_scss_1.default.postLink }, title))));\r\n}\r\nexports.TextContent = TextContent;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/TextContent/TextContent.tsx?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst textcontent_scss_1 = __importDefault(__webpack_require__(/*! ./textcontent.scss */ \"./src/shared/CardList/Card/TextContent/textcontent.scss\"));\r\nfunction TextContent(props) {\r\n    const { username, date, children, className = 'textContent' } = props;\r\n    return (react_1.default.createElement(\"div\", { className: textcontent_scss_1.default[className] },\r\n        react_1.default.createElement(\"div\", { className: textcontent_scss_1.default.metaData },\r\n            react_1.default.createElement(\"div\", { className: textcontent_scss_1.default.userLink },\r\n                react_1.default.createElement(\"img\", { className: textcontent_scss_1.default.avatar, src: \"https://i.redd.it/snk96iikvra51.png\", alt: \"avatar\" }),\r\n                react_1.default.createElement(\"a\", { href: \"#user-url\", className: textcontent_scss_1.default.username }, username)),\r\n            react_1.default.createElement(\"span\", { className: textcontent_scss_1.default.createdAt },\r\n                react_1.default.createElement(\"span\", { className: textcontent_scss_1.default.publishedLabel }, \"\\u041E\\u043F\\u0443\\u0431\\u043B\\u0438\\u043A\\u043E\\u0432\\u0430\\u043D\\u043E\"),\r\n                \" \",\r\n                date)),\r\n        children));\r\n}\r\nexports.TextContent = TextContent;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/TextContent/TextContent.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/TextContent/Title/Post/Post.tsx":
+/*!******************************************************************!*\
+  !*** ./src/shared/CardList/Card/TextContent/Title/Post/Post.tsx ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst react_dom_1 = __importDefault(__webpack_require__(/*! react-dom */ \"react-dom\"));\r\nconst __1 = __webpack_require__(/*! .. */ \"./src/shared/CardList/Card/TextContent/Title/index.ts\");\r\nconst __2 = __webpack_require__(/*! ../.. */ \"./src/shared/CardList/Card/TextContent/index.ts\");\r\nconst Controls_1 = __webpack_require__(/*! ../../../Controls */ \"./src/shared/CardList/Card/Controls/index.ts\");\r\nconst KarmaCounter_1 = __webpack_require__(/*! ../../../Controls/KarmaCounter */ \"./src/shared/CardList/Card/Controls/KarmaCounter/index.ts\");\r\nconst post_scss_1 = __importDefault(__webpack_require__(/*! ./post.scss */ \"./src/shared/CardList/Card/TextContent/Title/Post/post.scss\"));\r\nfunction Post({ score, username, title, date }) {\r\n    const node = document.querySelector('#modal_root');\r\n    if (!node)\r\n        return null;\r\n    return react_dom_1.default.createPortal((react_1.default.createElement(\"div\", { className: post_scss_1.default.container },\r\n        react_1.default.createElement(\"div\", { className: post_scss_1.default.modal },\r\n            react_1.default.createElement(\"div\", { className: post_scss_1.default.header },\r\n                react_1.default.createElement(Controls_1.Controls, { className: 'controls-modal' },\r\n                    react_1.default.createElement(KarmaCounter_1.KarmaCounter, { score: score })),\r\n                react_1.default.createElement(__2.TextContent, { username: username, date: date, className: 'textContent-modal' },\r\n                    react_1.default.createElement(__1.Title, { title: title }))),\r\n            react_1.default.createElement(\"div\", { className: post_scss_1.default.content },\r\n                react_1.default.createElement(\"p\", null, \"\\u0415\\u0441\\u0442\\u044C \\u043D\\u0430\\u0434 \\u0447\\u0435\\u043C \\u0437\\u0430\\u0434\\u0443\\u043C\\u0430\\u0442\\u044C\\u0441\\u044F: \\u0442\\u0449\\u0430\\u0442\\u0435\\u043B\\u044C\\u043D\\u044B\\u0435 \\u0438\\u0441\\u0441\\u043B\\u0435\\u0434\\u043E\\u0432\\u0430\\u043D\\u0438\\u044F \\u043A\\u043E\\u043D\\u043A\\u0443\\u0440\\u0435\\u043D\\u0442\\u043E\\u0432 \\u043F\\u0440\\u0435\\u0434\\u0441\\u0442\\u0430\\u0432\\u043B\\u044F\\u044E\\u0442 \\u0441\\u043E\\u0431\\u043E\\u0439 \\u043D\\u0435 \\u0447\\u0442\\u043E \\u0438\\u043D\\u043E\\u0435, \\u043A\\u0430\\u043A \\u043A\\u0432\\u0438\\u043D\\u0442\\u044D\\u0441\\u0441\\u0435\\u043D\\u0446\\u0438\\u044E \\u043F\\u043E\\u0431\\u0435\\u0434\\u044B \\u043C\\u0430\\u0440\\u043A\\u0435\\u0442\\u0438\\u043D\\u0433\\u0430 \\u043D\\u0430\\u0434 \\u0440\\u0430\\u0437\\u0443\\u043C\\u043E\\u043C \\u0438 \\u0434\\u043E\\u043B\\u0436\\u043D\\u044B \\u0431\\u044B\\u0442\\u044C \\u0430\\u0441\\u0441\\u043E\\u0446\\u0438\\u0430\\u0442\\u0438\\u0432\\u043D\\u043E \\u0440\\u0430\\u0441\\u043F\\u0440\\u0435\\u0434\\u0435\\u043B\\u0435\\u043D\\u044B \\u043F\\u043E \\u043E\\u0442\\u0440\\u0430\\u0441\\u043B\\u044F\\u043C. \\u041F\\u0440\\u0435\\u0436\\u0434\\u0435 \\u0432\\u0441\\u0435\\u0433\\u043E, \\u043D\\u0430\\u0447\\u0430\\u043B\\u043E \\u043F\\u043E\\u0432\\u0441\\u0435\\u0434\\u043D\\u0435\\u0432\\u043D\\u043E\\u0439 \\u0440\\u0430\\u0431\\u043E\\u0442\\u044B \\u043F\\u043E \\u0444\\u043E\\u0440\\u043C\\u0438\\u0440\\u043E\\u0432\\u0430\\u043D\\u0438\\u044E \\u043F\\u043E\\u0437\\u0438\\u0446\\u0438\\u0438 \\u043E\\u0434\\u043D\\u043E\\u0437\\u043D\\u0430\\u0447\\u043D\\u043E \\u0444\\u0438\\u043A\\u0441\\u0438\\u0440\\u0443\\u0435\\u0442 \\u043D\\u0435\\u043E\\u0431\\u0445\\u043E\\u0434\\u0438\\u043C\\u043E\\u0441\\u0442\\u044C \\u043A\\u043B\\u0430\\u0441\\u0442\\u0435\\u0440\\u0438\\u0437\\u0430\\u0446\\u0438\\u0438 \\u0443\\u0441\\u0438\\u043B\\u0438\\u0439. \\u041D\\u043E \\u0441\\u0442\\u043E\\u0440\\u043E\\u043D\\u043D\\u0438\\u043A\\u0438 \\u0442\\u043E\\u0442\\u0430\\u043B\\u0438\\u0442\\u0430\\u0440\\u0438\\u0437\\u043C\\u0430 \\u0432 \\u043D\\u0430\\u0443\\u043A\\u0435 \\u0438 \\u043F\\u043E \\u0441\\u0435\\u0439 \\u0434\\u0435\\u043D\\u044C \\u043E\\u0441\\u0442\\u0430\\u044E\\u0442\\u0441\\u044F \\u0443\\u0434\\u0435\\u043B\\u043E\\u043C \\u043B\\u0438\\u0431\\u0435\\u0440\\u0430\\u043B\\u043E\\u0432, \\u043A\\u043E\\u0442\\u043E\\u0440\\u044B\\u0435 \\u0436\\u0430\\u0436\\u0434\\u0443\\u0442 \\u0431\\u044B\\u0442\\u044C \\u043F\\u0440\\u0435\\u0432\\u0440\\u0430\\u0449\\u0435\\u043D\\u044B \\u0432 \\u043F\\u043E\\u0441\\u043C\\u0435\\u0448\\u0438\\u0449\\u0435, \\u0445\\u043E\\u0442\\u044F \\u0441\\u0430\\u043C\\u043E \\u0438\\u0445 \\u0441\\u0443\\u0449\\u0435\\u0441\\u0442\\u0432\\u043E\\u0432\\u0430\\u043D\\u0438\\u0435 \\u043F\\u0440\\u0438\\u043D\\u043E\\u0441\\u0438\\u0442 \\u043D\\u0435\\u0441\\u043E\\u043C\\u043D\\u0435\\u043D\\u043D\\u0443\\u044E \\u043F\\u043E\\u043B\\u044C\\u0437\\u0443 \\u043E\\u0431\\u0449\\u0435\\u0441\\u0442\\u0432\\u0443.\"),\r\n                react_1.default.createElement(\"p\", null, \"\\u0411\\u0435\\u0437\\u0443\\u0441\\u043B\\u043E\\u0432\\u043D\\u043E, \\u0433\\u043B\\u0443\\u0431\\u043E\\u043A\\u0438\\u0439 \\u0443\\u0440\\u043E\\u0432\\u0435\\u043D\\u044C \\u043F\\u043E\\u0433\\u0440\\u0443\\u0436\\u0435\\u043D\\u0438\\u044F \\u0441\\u043E\\u0437\\u0434\\u0430\\u0451\\u0442 \\u043D\\u0435\\u043E\\u0431\\u0445\\u043E\\u0434\\u0438\\u043C\\u043E\\u0441\\u0442\\u044C \\u0432\\u043A\\u043B\\u044E\\u0447\\u0435\\u043D\\u0438\\u044F \\u0432 \\u043F\\u0440\\u043E\\u0438\\u0437\\u0432\\u043E\\u0434\\u0441\\u0442\\u0432\\u0435\\u043D\\u043D\\u044B\\u0439 \\u043F\\u043B\\u0430\\u043D \\u0446\\u0435\\u043B\\u043E\\u0433\\u043E \\u0440\\u044F\\u0434\\u0430 \\u0432\\u043D\\u0435\\u043E\\u0447\\u0435\\u0440\\u0435\\u0434\\u043D\\u044B\\u0445 \\u043C\\u0435\\u0440\\u043E\\u043F\\u0440\\u0438\\u044F\\u0442\\u0438\\u0439 \\u0441 \\u0443\\u0447\\u0451\\u0442\\u043E\\u043C \\u043A\\u043E\\u043C\\u043F\\u043B\\u0435\\u043A\\u0441\\u0430 \\u0441\\u0438\\u0441\\u0442\\u0435\\u043C\\u044B \\u043C\\u0430\\u0441\\u0441\\u043E\\u0432\\u043E\\u0433\\u043E \\u0443\\u0447\\u0430\\u0441\\u0442\\u0438\\u044F. \\u0412\\u043D\\u0435\\u0437\\u0430\\u043F\\u043D\\u043E, \\u0441\\u0434\\u0435\\u043B\\u0430\\u043D\\u043D\\u044B\\u0435 \\u043D\\u0430 \\u0431\\u0430\\u0437\\u0435 \\u0438\\u043D\\u0442\\u0435\\u0440\\u043D\\u0435\\u0442-\\u0430\\u043D\\u0430\\u043B\\u0438\\u0442\\u0438\\u043A\\u0438 \\u0432\\u044B\\u0432\\u043E\\u0434\\u044B \\u043E\\u0441\\u0432\\u0435\\u0449\\u0430\\u044E\\u0442 \\u0447\\u0440\\u0435\\u0437\\u0432\\u044B\\u0447\\u0430\\u0439\\u043D\\u043E \\u0438\\u043D\\u0442\\u0435\\u0440\\u0435\\u0441\\u043D\\u044B\\u0435 \\u043E\\u0441\\u043E\\u0431\\u0435\\u043D\\u043D\\u043E\\u0441\\u0442\\u0438 \\u043A\\u0430\\u0440\\u0442\\u0438\\u043D\\u044B \\u0432 \\u0446\\u0435\\u043B\\u043E\\u043C, \\u043E\\u0434\\u043D\\u0430\\u043A\\u043E \\u043A\\u043E\\u043D\\u043A\\u0440\\u0435\\u0442\\u043D\\u044B\\u0435 \\u0432\\u044B\\u0432\\u043E\\u0434\\u044B, \\u0440\\u0430\\u0437\\u0443\\u043C\\u0435\\u0435\\u0442\\u0441\\u044F, \\u043E\\u043F\\u0438\\u0441\\u0430\\u043D\\u044B \\u043C\\u0430\\u043A\\u0441\\u0438\\u043C\\u0430\\u043B\\u044C\\u043D\\u043E \\u043F\\u043E\\u0434\\u0440\\u043E\\u0431\\u043D\\u043E.\"),\r\n                react_1.default.createElement(\"p\", null, \"\\u0420\\u0430\\u0437\\u043D\\u043E\\u043E\\u0431\\u0440\\u0430\\u0437\\u043D\\u044B\\u0439 \\u0438 \\u0431\\u043E\\u0433\\u0430\\u0442\\u044B\\u0439 \\u043E\\u043F\\u044B\\u0442 \\u0433\\u043E\\u0432\\u043E\\u0440\\u0438\\u0442 \\u043D\\u0430\\u043C, \\u0447\\u0442\\u043E \\u0432\\u044B\\u0431\\u0440\\u0430\\u043D\\u043D\\u044B\\u0439 \\u043D\\u0430\\u043C\\u0438 \\u0438\\u043D\\u043D\\u043E\\u0432\\u0430\\u0446\\u0438\\u043E\\u043D\\u043D\\u044B\\u0439 \\u043F\\u0443\\u0442\\u044C \\u043E\\u0431\\u0435\\u0441\\u043F\\u0435\\u0447\\u0438\\u0432\\u0430\\u0435\\u0442 \\u0448\\u0438\\u0440\\u043E\\u043A\\u043E\\u043C\\u0443 \\u043A\\u0440\\u0443\\u0433\\u0443 (\\u0441\\u043F\\u0435\\u0446\\u0438\\u0430\\u043B\\u0438\\u0441\\u0442\\u043E\\u0432) \\u0443\\u0447\\u0430\\u0441\\u0442\\u0438\\u0435 \\u0432 \\u0444\\u043E\\u0440\\u043C\\u0438\\u0440\\u043E\\u0432\\u0430\\u043D\\u0438\\u0438 \\u043D\\u043E\\u0432\\u044B\\u0445 \\u043F\\u0440\\u0438\\u043D\\u0446\\u0438\\u043F\\u043E\\u0432 \\u0444\\u043E\\u0440\\u043C\\u0438\\u0440\\u043E\\u0432\\u0430\\u043D\\u0438\\u044F \\u043C\\u0430\\u0442\\u0435\\u0440\\u0438\\u0430\\u043B\\u044C\\u043D\\u043E-\\u0442\\u0435\\u0445\\u043D\\u0438\\u0447\\u0435\\u0441\\u043A\\u043E\\u0439 \\u0438 \\u043A\\u0430\\u0434\\u0440\\u043E\\u0432\\u043E\\u0439 \\u0431\\u0430\\u0437\\u044B. \\u0422\\u0430\\u043A\\u0436\\u0435 \\u043A\\u0430\\u043A \\u0441\\u0443\\u0449\\u0435\\u0441\\u0442\\u0432\\u0443\\u044E\\u0449\\u0430\\u044F \\u0442\\u0435\\u043E\\u0440\\u0438\\u044F \\u0432 \\u0437\\u043D\\u0430\\u0447\\u0438\\u0442\\u0435\\u043B\\u044C\\u043D\\u043E\\u0439 \\u0441\\u0442\\u0435\\u043F\\u0435\\u043D\\u0438 \\u043E\\u0431\\u0443\\u0441\\u043B\\u043E\\u0432\\u043B\\u0438\\u0432\\u0430\\u0435\\u0442 \\u0432\\u0430\\u0436\\u043D\\u043E\\u0441\\u0442\\u044C \\u0431\\u043B\\u0430\\u0433\\u043E\\u043F\\u0440\\u0438\\u044F\\u0442\\u043D\\u044B\\u0445 \\u043F\\u0435\\u0440\\u0441\\u043F\\u0435\\u043A\\u0442\\u0438\\u0432. \\u0414\\u043B\\u044F \\u0441\\u043E\\u0432\\u0440\\u0435\\u043C\\u0435\\u043D\\u043D\\u043E\\u0433\\u043E \\u043C\\u0438\\u0440\\u0430 \\u043A\\u043E\\u043D\\u0441\\u0443\\u043B\\u044C\\u0442\\u0430\\u0446\\u0438\\u044F \\u0441 \\u0448\\u0438\\u0440\\u043E\\u043A\\u0438\\u043C \\u0430\\u043A\\u0442\\u0438\\u0432\\u043E\\u043C \\u043E\\u0434\\u043D\\u043E\\u0437\\u043D\\u0430\\u0447\\u043D\\u043E \\u043E\\u043F\\u0440\\u0435\\u0434\\u0435\\u043B\\u044F\\u0435\\u0442 \\u043A\\u0430\\u0436\\u0434\\u043E\\u0433\\u043E \\u0443\\u0447\\u0430\\u0441\\u0442\\u043D\\u0438\\u043A\\u0430 \\u043A\\u0430\\u043A \\u0441\\u043F\\u043E\\u0441\\u043E\\u0431\\u043D\\u043E\\u0433\\u043E \\u043F\\u0440\\u0438\\u043D\\u0438\\u043C\\u0430\\u0442\\u044C \\u0441\\u043E\\u0431\\u0441\\u0442\\u0432\\u0435\\u043D\\u043D\\u044B\\u0435 \\u0440\\u0435\\u0448\\u0435\\u043D\\u0438\\u044F \\u043A\\u0430\\u0441\\u0430\\u0435\\u043C\\u043E \\u043F\\u0440\\u0438\\u043E\\u0440\\u0438\\u0442\\u0438\\u0437\\u0430\\u0446\\u0438\\u0438 \\u0440\\u0430\\u0437\\u0443\\u043C\\u0430 \\u043D\\u0430\\u0434 \\u044D\\u043C\\u043E\\u0446\\u0438\\u044F\\u043C\\u0438!\"),\r\n                react_1.default.createElement(\"p\", null, \"\\u0412\\u043E\\u0442 \\u0432\\u0430\\u043C \\u044F\\u0440\\u043A\\u0438\\u0439 \\u043F\\u0440\\u0438\\u043C\\u0435\\u0440 \\u0441\\u043E\\u0432\\u0440\\u0435\\u043C\\u0435\\u043D\\u043D\\u044B\\u0445 \\u0442\\u0435\\u043D\\u0434\\u0435\\u043D\\u0446\\u0438\\u0439 - \\u043F\\u043E\\u0441\\u0442\\u043E\\u044F\\u043D\\u043D\\u044B\\u0439 \\u043A\\u043E\\u043B\\u0438\\u0447\\u0435\\u0441\\u0442\\u0432\\u0435\\u043D\\u043D\\u044B\\u0439 \\u0440\\u043E\\u0441\\u0442 \\u0438 \\u0441\\u0444\\u0435\\u0440\\u0430 \\u043D\\u0430\\u0448\\u0435\\u0439 \\u0430\\u043A\\u0442\\u0438\\u0432\\u043D\\u043E\\u0441\\u0442\\u0438 \\u043E\\u0431\\u0435\\u0441\\u043F\\u0435\\u0447\\u0438\\u0432\\u0430\\u0435\\u0442 \\u0430\\u043A\\u0442\\u0443\\u0430\\u043B\\u044C\\u043D\\u043E\\u0441\\u0442\\u044C \\u0433\\u043B\\u0443\\u0431\\u043E\\u043A\\u043E\\u043C\\u044B\\u0441\\u043B\\u0435\\u043D\\u043D\\u044B\\u0445 \\u0440\\u0430\\u0441\\u0441\\u0443\\u0436\\u0434\\u0435\\u043D\\u0438\\u0439! \\u041D\\u0435 \\u0441\\u043B\\u0435\\u0434\\u0443\\u0435\\u0442, \\u043E\\u0434\\u043D\\u0430\\u043A\\u043E, \\u0437\\u0430\\u0431\\u044B\\u0432\\u0430\\u0442\\u044C, \\u0447\\u0442\\u043E \\u0432\\u044B\\u0441\\u043E\\u043A\\u043E\\u043A\\u0430\\u0447\\u0435\\u0441\\u0442\\u0432\\u0435\\u043D\\u043D\\u044B\\u0439 \\u043F\\u0440\\u043E\\u0442\\u043E\\u0442\\u0438\\u043F \\u0431\\u0443\\u0434\\u0443\\u0449\\u0435\\u0433\\u043E \\u043F\\u0440\\u043E\\u0435\\u043A\\u0442\\u0430 \\u043F\\u0440\\u0435\\u0434\\u043F\\u043E\\u043B\\u0430\\u0433\\u0430\\u0435\\u0442 \\u043D\\u0435\\u0437\\u0430\\u0432\\u0438\\u0441\\u0438\\u043C\\u044B\\u0435 \\u0441\\u043F\\u043E\\u0441\\u043E\\u0431\\u044B \\u0440\\u0435\\u0430\\u043B\\u0438\\u0437\\u0430\\u0446\\u0438\\u0438 \\u0434\\u0430\\u043B\\u044C\\u043D\\u0435\\u0439\\u0448\\u0438\\u0445 \\u043D\\u0430\\u043F\\u0440\\u0430\\u0432\\u043B\\u0435\\u043D\\u0438\\u0439 \\u0440\\u0430\\u0437\\u0432\\u0438\\u0442\\u0438\\u044F.\"))))), node);\r\n}\r\nexports.Post = Post;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/TextContent/Title/Post/Post.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/TextContent/Title/Post/index.ts":
+/*!******************************************************************!*\
+  !*** ./src/shared/CardList/Card/TextContent/Title/Post/index.ts ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\r\n}\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\n__export(__webpack_require__(/*! ./Post */ \"./src/shared/CardList/Card/TextContent/Title/Post/Post.tsx\"));\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/TextContent/Title/Post/index.ts?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/TextContent/Title/Post/post.scss":
+/*!*******************************************************************!*\
+  !*** ./src/shared/CardList/Card/TextContent/Title/Post/post.scss ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"modal\": \"post__modal--3Csnf\",\n\t\"title\": \"post__title--iT6qR\",\n\t\"content\": \"post__content--1oEJo\",\n\t\"header\": \"post__header--1R-li\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/TextContent/Title/Post/post.scss?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/TextContent/Title/Title.tsx":
+/*!**************************************************************!*\
+  !*** ./src/shared/CardList/Card/TextContent/Title/Title.tsx ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importStar(__webpack_require__(/*! react */ \"react\"));\r\nconst title_scss_1 = __importDefault(__webpack_require__(/*! ./title.scss */ \"./src/shared/CardList/Card/TextContent/Title/title.scss\"));\r\nfunction Title({ title, children }) {\r\n    const [isModalOpened, setIsModalOpened] = react_1.useState(false);\r\n    return (react_1.default.createElement(\"h2\", { className: title_scss_1.default.title, onClick: () => { setIsModalOpened(true); } },\r\n        react_1.default.createElement(\"a\", { href: \"#post-url\", className: title_scss_1.default.postLink }, title),\r\n        isModalOpened && (children)));\r\n}\r\nexports.Title = Title;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/TextContent/Title/Title.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/TextContent/Title/index.ts":
+/*!*************************************************************!*\
+  !*** ./src/shared/CardList/Card/TextContent/Title/index.ts ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\r\n}\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\n__export(__webpack_require__(/*! ./Title */ \"./src/shared/CardList/Card/TextContent/Title/Title.tsx\"));\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/TextContent/Title/index.ts?");
+
+/***/ }),
+
+/***/ "./src/shared/CardList/Card/TextContent/Title/title.scss":
+/*!***************************************************************!*\
+  !*** ./src/shared/CardList/Card/TextContent/Title/title.scss ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"title\": \"title__title--3tBeX\",\n\t\"postLink\": \"title__postLink--3myAd\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/TextContent/Title/title.scss?");
 
 /***/ }),
 
@@ -388,7 +563,7 @@ eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// Exports\nmodule.exports = {\n\t\"textContent\": \"textcontent__textContent--36RnO\",\n\t\"publishedLabel\": \"textcontent__publishedLabel--3qyv9\",\n\t\"userLink\": \"textcontent__userLink--2DvdL\",\n\t\"avatar\": \"textcontent__avatar--39M_r\",\n\t\"createdAt\": \"textcontent__createdAt--2XYRb\",\n\t\"title\": \"textcontent__title--3n-Ks\",\n\t\"postLink\": \"textcontent__postLink--2czDE\",\n\t\"username\": \"textcontent__username--nWPj1\",\n\t\"metaData\": \"textcontent__metaData--3SRhz\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/TextContent/textcontent.scss?");
+eval("// Exports\nmodule.exports = {\n\t\"textContent\": \"textcontent__textContent--36RnO\",\n\t\"publishedLabel\": \"textcontent__publishedLabel--3qyv9\",\n\t\"userLink\": \"textcontent__userLink--2DvdL\",\n\t\"avatar\": \"textcontent__avatar--39M_r\",\n\t\"createdAt\": \"textcontent__createdAt--2XYRb\",\n\t\"title\": \"textcontent__title--3n-Ks\",\n\t\"postLink\": \"textcontent__postLink--2czDE\",\n\t\"username\": \"textcontent__username--nWPj1\",\n\t\"metaData\": \"textcontent__metaData--3SRhz\",\n\t\"textContent-modal\": \"textcontent__textContent-modal--3Dz0h\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/TextContent/textcontent.scss?");
 
 /***/ }),
 
@@ -918,6 +1093,17 @@ eval("module.exports = require(\"axios\");\n\n//# sourceURL=webpack:///external_
 
 /***/ }),
 
+/***/ "bootstrap/dist/css/bootstrap.min.css":
+/*!*******************************************************!*\
+  !*** external "bootstrap/dist/css/bootstrap.min.css" ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"bootstrap/dist/css/bootstrap.min.css\");\n\n//# sourceURL=webpack:///external_%22bootstrap/dist/css/bootstrap.min.css%22?");
+
+/***/ }),
+
 /***/ "classnames":
 /*!*****************************!*\
   !*** external "classnames" ***!
@@ -948,6 +1134,28 @@ eval("module.exports = require(\"express\");\n\n//# sourceURL=webpack:///externa
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"react\");\n\n//# sourceURL=webpack:///external_%22react%22?");
+
+/***/ }),
+
+/***/ "react-bootstrap/Button":
+/*!*****************************************!*\
+  !*** external "react-bootstrap/Button" ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react-bootstrap/Button\");\n\n//# sourceURL=webpack:///external_%22react-bootstrap/Button%22?");
+
+/***/ }),
+
+/***/ "react-dom":
+/*!****************************!*\
+  !*** external "react-dom" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react-dom\");\n\n//# sourceURL=webpack:///external_%22react-dom%22?");
 
 /***/ }),
 

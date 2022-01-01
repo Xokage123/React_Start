@@ -1,0 +1,14 @@
+.shareButton{
+  width: 20px;
+  height: 20px;
+}
+.saveButton {
+  width: 30px;
+  height: 30px;
+}
+
+@media all and (min-width: 1024px) {
+  .actions {
+    display: none;
+  }
+}
