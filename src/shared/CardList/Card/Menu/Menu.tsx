@@ -11,7 +11,7 @@ import { Text, EColors} from '../../../Text/Text';
 
 
 export function Menu() {
-  const [mainButton, setMainButton] = React.useState('Rising')
+  const [ isDropdownOpen, setIsDropdownOpen ] = React.useState(false)
 
 
   return (

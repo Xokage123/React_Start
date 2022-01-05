@@ -1,6 +1,6 @@
 import * as React from 'react';
 import axios from 'axios';
-import { tokenContext } from '../shared/context/tokenContaxt';
+import { useToken } from './useToken';
 
 interface IUserData {
   name?: string;
@@ -8,8 +8,8 @@ interface IUserData {
 }
 
 export function useUserData() {
-  const token = React.useContext(tokenContext)
   const [data, setData] = React.useState<IUserData>({});
+  const [token] = useToken();
   React.useEffect(() => {
     axios.get('https://oauth.reddit.com/api/v1/me', {
       headers: { Authorization: `bearer ${token}`}

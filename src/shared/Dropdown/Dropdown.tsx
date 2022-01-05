@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import styles from './dropdown.scss';
 
 interface IDropdownProps {
@@ -15,7 +16,7 @@ export function Dropdown({ button, children, isOpen = false, onOpen = NOOP, onCl
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(isOpen);
  
   React.useEffect(() =>  setIsDropdownOpen(isOpen), [isOpen]);
-  React.useEffect(() =>  isDropdownOpen ? onOpen() : onClose(), [isDropdownOpen])
+  React.useEffect(() =>  isDropdownOpen ? onOpen() : onClose(), [isDropdownOpen]);
 
 
   return (
@@ -31,5 +32,5 @@ export function Dropdown({ button, children, isOpen = false, onOpen = NOOP, onCl
        </div>
      )}
    </div>
-  );
+  )
 }

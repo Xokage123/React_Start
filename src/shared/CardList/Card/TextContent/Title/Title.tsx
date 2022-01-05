@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import styles from './title.scss';
+import { Post } from './Post';
 
-export function Title({ title, children }: { title?: string; children?: React.ReactNode; }) {
-  
+interface ITitleProps { 
+  title?: string;
+}
+
+export function Title(props: ITitleProps) {
+  const { title } = props;
   const [ isModalOpened, setIsModalOpened] = useState(false);
-
+  
 
   return (
     <h2 className={styles.title} onClick={() => { setIsModalOpened(true); }}>
@@ -12,7 +17,7 @@ export function Title({ title, children }: { title?: string; children?: React.Re
         {title}
       </a>
       {isModalOpened && (
-        children
+        <Post onClose={setIsModalOpened}/>
       )}
     </h2>
   );

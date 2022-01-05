@@ -39,9 +39,7 @@ export function Card(props: ICardProps) {
   return (
    <li className={ styles.card } key={id}>
      <TextContent username={username}  date={formattedTime} >
-      <Title title={title}>
-        <Post score={score} username={username} date={formattedTime} title={title}/>
-      </Title>
+      <Title title={title} />
      </TextContent> 
      <Preview thumbnail={thumbnail} />
      <Menu />

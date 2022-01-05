@@ -1,15 +1,21 @@
 @import '../../../../../variables';
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.10);
+}
 .modal {
   padding: 50px 60px;
-  position: absolute;
-  width: 960px;
-  height: 960px;
-  left: 480px;
-  top: 281px;
+  position: fixed;
+  width: 50%;
+  height: 90%;
+  left: 25%;
+  top:  5%;
   background: $white;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
   border-radius: 7px;
   z-index: 3;
+  overflow-y: scroll;
 }
 .title {
   font-family: Roboto;
