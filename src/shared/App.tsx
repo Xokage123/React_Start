@@ -7,12 +7,15 @@ import { Content } from './Content';
 import { CardList } from './CardList';
 import { UserContextProvider } from './context/userContext';
 import { PostsDataContextProvider } from './context/postsDataContext';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider } from 'react-redux';
 import { rootReducer } from "./store/rootReducer";
+import thunk from 'redux-thunk';
 
-const store = createStore(rootReducer, composeWithDevTools())
+const store = createStore(rootReducer, composeWithDevTools( 
+  applyMiddleware(thunk),
+))
 
 export function App() { 
   

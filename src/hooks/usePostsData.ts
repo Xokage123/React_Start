@@ -5,7 +5,7 @@ import { RootState } from '../shared/store/rootReducer';
 
 
 export function usePostsData() {
-  const token = useSelector<RootState>(state => state.setToken);
+  const token = useSelector<RootState>(state => state.setToken.token);
   const [postsData, setPostsData] = React.useState([]);
   React.useEffect(() => {
     axios.get('https://oauth.reddit.com/best', {
