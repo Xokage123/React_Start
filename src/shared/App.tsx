@@ -45,7 +45,5 @@ export function App() {
 
 
 
-function useRouteMatch(arg0: string) {
-   throw new Error('Function not implemented.');
-}
+
         
