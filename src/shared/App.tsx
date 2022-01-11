@@ -12,7 +12,7 @@ import { rootReducer } from "./store/rootReducer";
 import thunk from 'redux-thunk';
 import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom'
 import { useIsMounted } from './utils/React/useIsMuonted';
-import { Post } from './CardList/Card/TextContent/Title/Post/Post';
+import { Post } from './Post/Post';
 
 const store = createStore(rootReducer, composeWithDevTools( 
   applyMiddleware(thunk),

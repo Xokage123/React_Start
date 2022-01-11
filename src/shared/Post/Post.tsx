@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './post.scss';
 import { useNavigate, useParams } from 'react-router-dom'
-import { Title } from '..';
+import { Title } from '../CardList/Card/TextContent/Title';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../../../store/rootReducer';
-import { ICardProps, time } from '../../..';
-import { TextContent } from '../../TextContent';
-import { KarmaCounter } from '../../../Controls/KarmaCounter';
-import { Controls } from '../../../Controls';
-import { Preview } from '../../../Preview';
+import { RootState } from '../store/rootReducer';
+import { ICardProps, time } from '../CardList/Card';
+import { TextContent } from '../CardList/Card/TextContent/TextContent';
+import { KarmaCounter } from '../CardList/Card/Controls/KarmaCounter';
+import { Controls } from '../CardList/Card/Controls';
+import { Preview } from '../CardList/Card/Preview';
+import { Form } from './Form';
 
 
 export function Post() {
@@ -53,8 +54,9 @@ export function Post() {
         </div>
         <div className={styles.content}>
           <p className={styles.selfText}>{thisPostData.selftext}</p>
+          <Preview thumbnail={thisPostData.thumbnail} className='preview-modal'/>
         </div>
-        <Preview thumbnail={thisPostData.thumbnail} className='preview-modal'/>
+        <Form />
       </div>
     </div>
   ), node);

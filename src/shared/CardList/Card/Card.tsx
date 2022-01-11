@@ -9,7 +9,7 @@ import { Menu } from './Menu';
 import { Preview } from './Preview';
 import { TextContent } from './TextContent';
 import { Title } from './TextContent/Title';
-import { Post } from './TextContent/Title/Post';
+import { Post } from '../../Post';
 
 export interface ICardProps {
   selftext?: string;
