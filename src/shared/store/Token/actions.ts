@@ -7,7 +7,7 @@ export type tokenRequest = {
   type: typeof SAVING_TOKEN;
 }
 
-export const tokenRequest: ActionCreator<AnyAction> = () => ({
+export const tokenRequest: ActionCreator<tokenRequest> = () => ({
   type: SAVING_TOKEN,
 });
 

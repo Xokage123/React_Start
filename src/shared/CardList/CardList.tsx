@@ -1,17 +1,21 @@
 import React from 'react';
-import { Card } from './Card';
-import { postsDataContext } from '../context/postsDataContext';
+import { Card, ICardProps } from './Card';
 import styles from './cardlist.scss';
 import { generateRandomString } from '../utils/React/generateRandomIndex';
+import { useSelector } from 'react-redux';
+import { RootState } from '../store/rootReducer';
+import { usePostsData } from '../../hooks/usePostsData';
 
 export function CardList() {
-  const postsData = React.useContext(postsDataContext);
+
+  usePostsData();
+  const postsData = useSelector<RootState, ICardProps[]>(state => state.postsData.postsData);
 
   return (
     <ul className={styles.cardList}>
       {postsData.map((item: {[N: string]: any}) => (
         <Card 
-        key={generateRandomString()} 
+        key={item.id} 
         id={item.id}
         username={item.username}
         title={item.title}

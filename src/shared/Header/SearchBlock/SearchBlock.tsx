@@ -1,17 +1,20 @@
 import React from 'react';
 import styles from './searchblock.scss';
 import { UserBlock } from './UserBlock';
-import { useUserData } from '../../../hooks/useUserData';
-import { userContext } from '../../context/userContext';
+import { IUserData, useUserData } from '../../../hooks/useUserData';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store/rootReducer';
 
 
 export function SearchBlock() {
-
-  const {iconImg, name} = React.useContext(userContext)
+  
+  useUserData();
+  const {iconImg, name} = useSelector<RootState, IUserData>(state => state.me.data);
+  const loading = useSelector<RootState, boolean>(state => state.me.loading)
 
   return (
    <div className={styles.searchBlock}>
-     <UserBlock avatarSrc={iconImg} userName={name}/>
+     <UserBlock avatarSrc={iconImg} userName={name} loading={loading}/>
    </div>
   );
 }

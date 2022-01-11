@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useDispatch, useSelector, useStore } from 'react-redux';
 import { RootState } from '../shared/store/rootReducer';
-import { tokenRequestSync } from '../shared/store/Token/actions';
+import { tokenRequestSync } from '../shared/store/token/actions';
 
 
 export function useToken() {

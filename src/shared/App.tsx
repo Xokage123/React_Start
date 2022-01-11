@@ -5,36 +5,47 @@ import './main.global.scss'
 import { Header } from './Header';
 import { Content } from './Content';
 import { CardList } from './CardList';
-import { UserContextProvider } from './context/userContext';
-import { PostsDataContextProvider } from './context/postsDataContext';
 import { applyMiddleware, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider } from 'react-redux';
 import { rootReducer } from "./store/rootReducer";
 import thunk from 'redux-thunk';
+import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom'
+import { useIsMounted } from './utils/React/useIsMuonted';
+import { Post } from './CardList/Card/TextContent/Title/Post/Post';
 
 const store = createStore(rootReducer, composeWithDevTools( 
   applyMiddleware(thunk),
 ))
 
 export function App() { 
+  const [ isMounted ] = useIsMounted();
   
+
    return (
       <Provider store={store}>
-            <UserContextProvider>
-               <PostsDataContextProvider>
-                  <Layout >
-                     <Header />
-                     <Content>
+         {isMounted && (
+            <BrowserRouter>
+               <Layout >
+                  <Header />
+                  <Content>
                      <CardList />
-                     </Content>
-                  </Layout> 
-               </PostsDataContextProvider>
-            </UserContextProvider>
+                        <Routes>
+                           <Route path={'/posts/:id'} element={<Post />} />
+                        </Routes>
+                  </Content>
+               </Layout> 
+            </BrowserRouter> 
+         )}
+         
       </Provider>
    )
 }
 
 
 
+
+function useRouteMatch(arg0: string) {
+   throw new Error('Function not implemented.');
+}
         

@@ -1,20 +1,30 @@
 @import '../../../variables';
 @media all and (min-width: 1024px) {
-  .preview {
-    flex: 0 0;
-    order: 1;
-    padding: 10px 50px 10px 10px;
-  }
-  img.previewImg {
-    height: 107px;
-    width: 190px;
-  }
+.preview {
+  flex: 0 0;
+  order: 1;
+  padding: 10px 50px 10px 10px;
+}
+img.previewImg {
+  height: 107px;
+  width: 190px;
+}
 }
 .preview {
   max-height: 178px;
 }
 .previewImg {
- max-height: 178px;
- width: 100%;
-object-fit: cover;
+  max-height: 178px;
+  width: 100%;
+  object-fit: cover;
 } 
+.preview-modal {
+  flex: 1 0;
+  max-height: 300px;
+}
+.preview-modal img {
+  width: 100%;
+  height: 500px;
+  max-height: 500px;
+  object-fit: cover;
+}

@@ -9,11 +9,6 @@ const app = express();
 
 app.use('/static', express.static('./dist/client'));
 
-app.get('/', (req, res) => {
-  res.send(
-    indexTemplate(ReactDOM.renderToString(<App/>)),
-  );
-});
 
 app.get('/auth', (req, res) => {
   axios.post(
@@ -27,11 +22,17 @@ app.get('/auth', (req, res) => {
     .then(({ data }) => {
       res.send(
         indexTemplate(ReactDOM.renderToString(<App/>), data['access_token']),
+        );
+        
+      })
+      .catch(console.log)
+    });
+    
+    app.get('*', (req, res) => {
+      res.send(
+        indexTemplate(ReactDOM.renderToString(<App/>)),
       );
-      
-    })
-    .catch(console.log)
-});
+    });
 
 app.listen(3000, () => {
   console.log('Server started on http://localhost:3000');
