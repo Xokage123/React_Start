@@ -1,3 +1,4 @@
+@import '../../variables';
 .textarea {
   resize: none;
   padding: 18px 16px;
@@ -13,6 +14,9 @@
   font-size: 16px;
   line-height: 19px;
 }
+.textarea:focus-visible{
+    outline: 1px solid $orange;
+}
 .textarea_btn {
   font-family: Roboto;
   font-style: normal;
@@ -24,4 +28,19 @@
   height: 50px;
   background: #CC6633;
   border-radius: 0px 0px 3px 0px;
+}
+.textarea_btn:disabled {
+  background-color: rgb(136, 136, 136) !important;
+}
+.textarea_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.error {
+  color: red;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
 }

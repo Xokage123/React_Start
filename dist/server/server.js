@@ -213,7 +213,7 @@ eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProp
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst card_scss_1 = __importDefault(__webpack_require__(/*! ./card.scss */ \"./src/shared/CardList/Card/card.scss\"));\r\nconst Controls_1 = __webpack_require__(/*! ./Controls */ \"./src/shared/CardList/Card/Controls/index.ts\");\r\nconst Actions_1 = __webpack_require__(/*! ./Controls/Actions */ \"./src/shared/CardList/Card/Controls/Actions/index.ts\");\r\nconst CommentsButton_1 = __webpack_require__(/*! ./Controls/CommentsButton */ \"./src/shared/CardList/Card/Controls/CommentsButton/index.ts\");\r\nconst KarmaCounter_1 = __webpack_require__(/*! ./Controls/KarmaCounter */ \"./src/shared/CardList/Card/Controls/KarmaCounter/index.ts\");\r\nconst Menu_1 = __webpack_require__(/*! ./Menu */ \"./src/shared/CardList/Card/Menu/index.ts\");\r\nconst Preview_1 = __webpack_require__(/*! ./Preview */ \"./src/shared/CardList/Card/Preview/index.ts\");\r\nconst TextContent_1 = __webpack_require__(/*! ./TextContent */ \"./src/shared/CardList/Card/TextContent/index.ts\");\r\nconst Title_1 = __webpack_require__(/*! ./TextContent/Title */ \"./src/shared/CardList/Card/TextContent/Title/index.ts\");\r\nfunction time(created) {\r\n    let unix_timestamp = created;\r\n    let date = new Date(unix_timestamp * 1000);\r\n    let hours = \"0\" + date.getHours();\r\n    let minutes = \"0\" + date.getMinutes();\r\n    let month = +date.getMonth();\r\n    let day = date.getDay();\r\n    let year = date.getFullYear();\r\n    let formattedTime = hours.substr(-2) + ':' + minutes.substr(-2) + ' ' + day + '.' + month + '.' + year;\r\n    return formattedTime;\r\n}\r\nexports.time = time;\r\nfunction Card(props) {\r\n    const { id, username, title, score, num_comments, thumbnail, created } = props;\r\n    return (react_1.default.createElement(\"li\", { className: card_scss_1.default.card },\r\n        react_1.default.createElement(TextContent_1.TextContent, { username: username, date: time(created) },\r\n            react_1.default.createElement(Title_1.Title, { title: title, id: id })),\r\n        react_1.default.createElement(Preview_1.Preview, { thumbnail: thumbnail }),\r\n        react_1.default.createElement(Menu_1.Menu, null),\r\n        react_1.default.createElement(Controls_1.Controls, null,\r\n            react_1.default.createElement(KarmaCounter_1.KarmaCounter, { score: score }),\r\n            react_1.default.createElement(CommentsButton_1.CommentsButton, { num_comments: num_comments }),\r\n            react_1.default.createElement(Actions_1.Actions, null))));\r\n}\r\nexports.Card = Card;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Card.tsx?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst card_scss_1 = __importDefault(__webpack_require__(/*! ./card.scss */ \"./src/shared/CardList/Card/card.scss\"));\r\nconst Controls_1 = __webpack_require__(/*! ./Controls */ \"./src/shared/CardList/Card/Controls/index.ts\");\r\nconst Actions_1 = __webpack_require__(/*! ./Controls/Actions */ \"./src/shared/CardList/Card/Controls/Actions/index.ts\");\r\nconst CommentsButton_1 = __webpack_require__(/*! ./Controls/CommentsButton */ \"./src/shared/CardList/Card/Controls/CommentsButton/index.ts\");\r\nconst KarmaCounter_1 = __webpack_require__(/*! ./Controls/KarmaCounter */ \"./src/shared/CardList/Card/Controls/KarmaCounter/index.ts\");\r\nconst Menu_1 = __webpack_require__(/*! ./Menu */ \"./src/shared/CardList/Card/Menu/index.ts\");\r\nconst Preview_1 = __webpack_require__(/*! ./Preview */ \"./src/shared/CardList/Card/Preview/index.ts\");\r\nconst TextContent_1 = __webpack_require__(/*! ./TextContent */ \"./src/shared/CardList/Card/TextContent/index.ts\");\r\nconst Title_1 = __webpack_require__(/*! ./TextContent/Title */ \"./src/shared/CardList/Card/TextContent/Title/index.ts\");\r\nfunction time(created) {\r\n    let unix_timestamp = created;\r\n    let date = new Date(unix_timestamp * 1000);\r\n    let formattedTime = String(date).substr(4, 20);\r\n    return formattedTime;\r\n}\r\nexports.time = time;\r\nfunction Card(props) {\r\n    const { id, username, title, score, num_comments, thumbnail, created } = props;\r\n    return (react_1.default.createElement(\"li\", { className: card_scss_1.default.card },\r\n        react_1.default.createElement(TextContent_1.TextContent, { username: username, date: time(created) },\r\n            react_1.default.createElement(Title_1.Title, { title: title, id: id })),\r\n        react_1.default.createElement(Preview_1.Preview, { thumbnail: thumbnail }),\r\n        react_1.default.createElement(Menu_1.Menu, null),\r\n        react_1.default.createElement(Controls_1.Controls, null,\r\n            react_1.default.createElement(KarmaCounter_1.KarmaCounter, { score: score }),\r\n            react_1.default.createElement(CommentsButton_1.CommentsButton, { num_comments: num_comments }),\r\n            react_1.default.createElement(Actions_1.Actions, null))));\r\n}\r\nexports.Card = Card;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/Card/Card.tsx?");
 
 /***/ }),
 
@@ -563,7 +563,7 @@ eval("\r\nfunction __export(m) {\r\n    for (var p in m) if (!exports.hasOwnProp
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst Card_1 = __webpack_require__(/*! ./Card */ \"./src/shared/CardList/Card/index.ts\");\r\nconst cardlist_scss_1 = __importDefault(__webpack_require__(/*! ./cardlist.scss */ \"./src/shared/CardList/cardlist.scss\"));\r\nconst react_redux_1 = __webpack_require__(/*! react-redux */ \"react-redux\");\r\nconst usePostsData_1 = __webpack_require__(/*! ../../hooks/usePostsData */ \"./src/hooks/usePostsData.ts\");\r\nfunction CardList() {\r\n    usePostsData_1.usePostsData();\r\n    const postsData = react_redux_1.useSelector(state => state.postsData.postsData);\r\n    return (react_1.default.createElement(\"ul\", { className: cardlist_scss_1.default.cardList }, postsData.map((item) => (react_1.default.createElement(Card_1.Card, { key: item.id, id: item.id, username: item.username, title: item.title, score: item.score, num_comments: item.num_comments, thumbnail: item.thumbnail, created: item.created })))));\r\n}\r\nexports.CardList = CardList;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/CardList.tsx?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst Card_1 = __webpack_require__(/*! ./Card */ \"./src/shared/CardList/Card/index.ts\");\r\nconst cardlist_scss_1 = __importDefault(__webpack_require__(/*! ./cardlist.scss */ \"./src/shared/CardList/cardlist.scss\"));\r\nconst react_redux_1 = __webpack_require__(/*! react-redux */ \"react-redux\");\r\nconst usePostsData_1 = __webpack_require__(/*! ../../hooks/usePostsData */ \"./src/hooks/usePostsData.ts\");\r\nfunction CardList() {\r\n    usePostsData_1.usePostsData();\r\n    const postsData = react_redux_1.useSelector(state => state.postsData.postsData);\r\n    const loading = react_redux_1.useSelector(state => state.postsData.loading);\r\n    const error = react_redux_1.useSelector(state => state.postsData.error);\r\n    return (react_1.default.createElement(\"ul\", { className: cardlist_scss_1.default.cardList },\r\n        postsData.length === 0 && !loading && !error && (react_1.default.createElement(\"div\", { className: cardlist_scss_1.default.status }, \"\\u041D\\u0435\\u0442 \\u043D\\u0438 \\u043E\\u0434\\u043D\\u043E\\u0433\\u043E \\u043F\\u043E\\u0441\\u0442\\u0430\")),\r\n        postsData.map((item) => (react_1.default.createElement(Card_1.Card, { key: item.id, id: item.id, username: item.username, title: item.title, score: item.score, num_comments: item.num_comments, thumbnail: item.thumbnail, created: item.created }))),\r\n        loading && (react_1.default.createElement(\"div\", { className: cardlist_scss_1.default.status }, \"\\u0417\\u0430\\u0433\\u0440\\u0443\\u0437\\u043A\\u0430...\")),\r\n        error && (react_1.default.createElement(\"div\", { className: cardlist_scss_1.default.status }, error))));\r\n}\r\nexports.CardList = CardList;\r\n\n\n//# sourceURL=webpack:///./src/shared/CardList/CardList.tsx?");
 
 /***/ }),
 
@@ -574,7 +574,7 @@ eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod)
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// Exports\nmodule.exports = {\n\t\"cardList\": \"cardlist__cardList--2WH4h\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardList/cardlist.scss?");
+eval("// Exports\nmodule.exports = {\n\t\"cardList\": \"cardlist__cardList--2WH4h\",\n\t\"status\": \"cardlist__status--2_czr\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardList/cardlist.scss?");
 
 /***/ }),
 
@@ -937,7 +937,7 @@ eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod)
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst form_scss_1 = __importDefault(__webpack_require__(/*! ./form.scss */ \"./src/shared/Post/Form/form.scss\"));\r\nfunction Form() {\r\n    return (react_1.default.createElement(\"div\", null,\r\n        react_1.default.createElement(\"textarea\", { className: form_scss_1.default.textarea, cols: 30, rows: 10 }),\r\n        react_1.default.createElement(\"button\", { className: form_scss_1.default.textarea_btn }, \"\\u041A\\u043E\\u043C\\u043C\\u0435\\u043D\\u0442\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C\")));\r\n}\r\nexports.Form = Form;\r\n\n\n//# sourceURL=webpack:///./src/shared/Post/Form/Form.tsx?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nvar __importStar = (this && this.__importStar) || function (mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result[\"default\"] = mod;\r\n    return result;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\r\nconst form_scss_1 = __importDefault(__webpack_require__(/*! ./form.scss */ \"./src/shared/Post/Form/form.scss\"));\r\nconst formik_1 = __webpack_require__(/*! formik */ \"formik\");\r\nconst Yup = __importStar(__webpack_require__(/*! yup */ \"yup\"));\r\nconst react_redux_1 = __webpack_require__(/*! react-redux */ \"react-redux\");\r\nfunction Form() {\r\n    const { name } = react_redux_1.useSelector(state => state.me.data);\r\n    const formik = formik_1.useFormik({\r\n        initialValues: {\r\n            text: \"\"\r\n        },\r\n        validationSchema: Yup.object({\r\n            text: Yup.string()\r\n                .max(50, \"Должно быть 50 символов или меньше\")\r\n                .required(\"Объязательна для заполнения\"),\r\n        }),\r\n        onSubmit: (e) => {\r\n            alert(e.text);\r\n        }\r\n    });\r\n    return (react_1.default.createElement(\"form\", { onSubmit: formik.handleSubmit },\r\n        react_1.default.createElement(\"textarea\", { name: \"text\", id: \"text\", className: form_scss_1.default.textarea, onChange: formik.handleChange, placeholder: `${name}, оставьте ваш комментарий`, onBlur: formik.handleBlur }),\r\n        react_1.default.createElement(\"div\", { className: form_scss_1.default.textarea_bottom },\r\n            react_1.default.createElement(\"div\", { className: form_scss_1.default.error }, formik.touched.text && formik.errors.text),\r\n            react_1.default.createElement(\"button\", { type: 'submit', className: form_scss_1.default.textarea_btn }, \"\\u041A\\u043E\\u043C\\u043C\\u0435\\u043D\\u0442\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C\"))));\r\n}\r\nexports.Form = Form;\r\n\n\n//# sourceURL=webpack:///./src/shared/Post/Form/Form.tsx?");
 
 /***/ }),
 
@@ -948,7 +948,7 @@ eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod)
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// Exports\nmodule.exports = {\n\t\"textarea\": \"form__textarea--d5HYq\",\n\t\"textarea_btn\": \"form__textarea_btn---HQTh\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/Post/Form/form.scss?");
+eval("// Exports\nmodule.exports = {\n\t\"textarea\": \"form__textarea--d5HYq\",\n\t\"textarea_btn\": \"form__textarea_btn---HQTh\",\n\t\"textarea_bottom\": \"form__textarea_bottom--3oJrm\",\n\t\"error\": \"form__error--30cRs\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/Post/Form/form.scss?");
 
 /***/ }),
 
@@ -1198,6 +1198,17 @@ eval("module.exports = require(\"express\");\n\n//# sourceURL=webpack:///externa
 
 /***/ }),
 
+/***/ "formik":
+/*!*************************!*\
+  !*** external "formik" ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"formik\");\n\n//# sourceURL=webpack:///external_%22formik%22?");
+
+/***/ }),
+
 /***/ "react":
 /*!************************!*\
   !*** external "react" ***!
@@ -1283,6 +1294,17 @@ eval("module.exports = require(\"redux-devtools-extension\");\n\n//# sourceURL=w
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"redux-thunk\");\n\n//# sourceURL=webpack:///external_%22redux-thunk%22?");
+
+/***/ }),
+
+/***/ "yup":
+/*!**********************!*\
+  !*** external "yup" ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"yup\");\n\n//# sourceURL=webpack:///external_%22yup%22?");
 
 /***/ })
 

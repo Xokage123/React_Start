@@ -22,14 +22,10 @@ export interface ICardProps {
   created: number;
 }
 
-export function time(created: number) {let unix_timestamp = created
+export function time(created: number) {
+  let unix_timestamp = created
   let date = new Date(unix_timestamp * 1000);
-  let hours = "0" + date.getHours();
-  let minutes = "0" + date.getMinutes();
-  let month = + date.getMonth();
-  let day = date.getDay();
-  let year = date.getFullYear();
-  let formattedTime = hours.substr(-2) + ':' + minutes.substr(-2) + ' ' + day + '.' + month + '.' + year; 
+  let formattedTime = String(date).substr(4, 20)
   return formattedTime;
  }
 
