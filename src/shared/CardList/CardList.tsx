@@ -4,14 +4,14 @@ import styles from './cardlist.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../store/rootReducer';
 import { usePostsData } from '../../hooks/usePostsData';
-import { after, postsRequestAsync } from '../store/posts/actions';
+import { postsRequestAsync } from '../store/posts/actions';
 import { generateId, generateRandomString } from '../utils/React/generateRandomIndex';
 
 export function CardList() {
   const bottomOfList = useRef(null);
   const dispatch = useDispatch();
 
-  const token = useSelector<RootState, string>(state => state.after.after);
+
   const postsData = useSelector<RootState, ICardProps[]>(state => state.postsData.postsData);
   const loading = useSelector<RootState, boolean>(state => state.postsData.loading);
   const error = useSelector<RootState, string>(state => state.postsData.error);
@@ -30,7 +30,7 @@ export function CardList() {
         observer.unobserve(bottomOfList.current)
       }
     }
-  }, [bottomOfList.current, token])
+  }, [bottomOfList.current])
 
   return (
     <ul className={styles.cardList}>

@@ -1,5 +1,5 @@
 import { Reducer } from 'redux';
-import { SAVING_POSTS, SAVING_POSTS_ERROR, SAVING_POSTS_SUCCES } from './posts/actions';
+import { SAVING_AFTER, SAVING_AFTER_ERROR, SAVING_AFTER_SUCCES, SAVING_POSTS, SAVING_POSTS_ERROR, SAVING_POSTS_SUCCES } from './posts/actions';
 import { SAVING_TOKEN, SAVING_TOKEN_ERROR, SAVING_TOKEN_SUCCES } from './token/actions';
 import { tokenReducer, TokenState } from './token/reducer';
 import { afterReducer, AfterState, postsReducer, PostsState } from './posts/reducer'
@@ -22,7 +22,7 @@ export const initialState = {
      error: '',
      data: {},
    },
-   after: {
+   afterData: {
     loading: false,
     error: '',
     after: '',
@@ -33,7 +33,7 @@ export type RootState = {
   setToken: TokenState;
   postsData: PostsState;
   me: MeState;
-  after: AfterState;
+  afterData: AfterState;
 }
 
 export const rootReducer: Reducer<RootState> = (state = initialState, action) => {
@@ -59,12 +59,12 @@ export const rootReducer: Reducer<RootState> = (state = initialState, action) =>
             ...state,
             me: meReducer(state.me, action),
           };
-      case SAVING_ME:
-      case SAVING_ME_SUCCES:
-      case SAVING_ME_ERROR:
+      case SAVING_AFTER:
+      case SAVING_AFTER_SUCCES:
+      case SAVING_AFTER_ERROR:
           return {
             ...state,
-            after: afterReducer(state.after, action),
+            afterData: afterReducer(state.afterData, action),
           };
     default:
       return state;

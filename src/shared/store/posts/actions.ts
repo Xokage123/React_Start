@@ -56,7 +56,7 @@ export type afterRequestSuccess = {
 
 export const afterRequestSuccess: ActionCreator<afterRequestSuccess> = (after: string) => ({
   type: SAVING_AFTER_SUCCES,
-  after,
+  after: after
 });
 
 export const SAVING_AFTER_ERROR = 'SAVING_AFTER_ERROR';
@@ -70,7 +70,6 @@ export const afterRequestError: ActionCreator<afterRequestError> = (error: strin
   error,
 });
 
-export let after = '';
 
 export const postsRequestAsync = () : ThunkAction< void, RootState, unknown, Action<string>> => (dispatch, getState) => {
     
@@ -80,12 +79,12 @@ export const postsRequestAsync = () : ThunkAction< void, RootState, unknown, Act
       headers: { Authorization: `bearer ${getState().setToken.token}`},
       params: {
         limit: 10,
-        after: after
+        after: getState().afterData.after
       }
     })
       .then((resp) => {
         const data = resp.data.data.children.map( (item: { kind: string , data: {[N: string]: any}}) => item.data);
-        after = resp.data.data.after;
+        const nextAfter = resp.data.data.after;
         
         const postsData = data.map((item: {[N: string]: any}) => ({ 
           title: item.title,
@@ -98,8 +97,8 @@ export const postsRequestAsync = () : ThunkAction< void, RootState, unknown, Act
           selftext: item.selftext
         }));
         dispatch(postsRequestSuccess(postsData));
-        dispatch(afterRequestSuccess(after));
-        console.log(after);
+        dispatch(afterRequestSuccess(nextAfter));
+        console.log(getState().afterData.after)
       })
       .catch((error) => {
         console.log(error);
