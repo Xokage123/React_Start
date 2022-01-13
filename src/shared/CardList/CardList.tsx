@@ -11,15 +11,19 @@ export function CardList() {
   const bottomOfList = useRef(null);
   const dispatch = useDispatch();
 
-
+  const token = useSelector<RootState, string>(state => state.setToken.token)
+  const after = useSelector<RootState, string>(state => state.afterData.after)
   const postsData = useSelector<RootState, ICardProps[]>(state => state.postsData.postsData);
   const loading = useSelector<RootState, boolean>(state => state.postsData.loading);
   const error = useSelector<RootState, string>(state => state.postsData.error);
 
   useEffect(() => {
     console.log('hello')
-    const observer = new IntersectionObserver(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if(!token) return
+      if (entries[0].isIntersecting) {
        dispatch(postsRequestAsync());
+      }
     });
     if (bottomOfList.current) {
       observer.observe(bottomOfList.current)
@@ -30,7 +34,7 @@ export function CardList() {
         observer.unobserve(bottomOfList.current)
       }
     }
-  }, [bottomOfList.current])
+  }, [bottomOfList.current, after, token])
 
   return (
     <ul className={styles.cardList}>
@@ -40,7 +44,7 @@ export function CardList() {
 
       { postsData.map((item: {[N: string]: any}) => (
       <Card 
-      key={generateRandomString()} 
+      key={item.id} 
       id={item.id}
       username={item.username}
       title={item.title}
