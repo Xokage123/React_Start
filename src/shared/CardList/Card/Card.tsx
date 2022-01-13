@@ -19,7 +19,7 @@ export interface ICardProps {
   score: number;
   num_comments: number;
   thumbnail: string;
-  created: number;
+  created: number; 
 }
 
 export function time(created: number) {
