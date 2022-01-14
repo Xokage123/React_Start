@@ -10,7 +10,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider } from 'react-redux';
 import { rootReducer } from "./store/rootReducer";
 import thunk from 'redux-thunk';
-import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import { useIsMounted } from './utils/React/useIsMuonted';
 import { Post } from './Post/Post';
 
@@ -28,12 +28,13 @@ export function App() {
             <BrowserRouter>
                <Layout >
                   <Header />
-                  <Content>
-                     <CardList />
                         <Routes>
-                           <Route path={'/posts/:id'} element={<Post />} />
+                           <Route path={'/auth'} element={<Navigate to={'/posts/'} /> }/>
+                           <Route path={'/'} element={<Navigate to={'/posts/'}/> } />
+                           <Route path={'/posts/'} element={<Content><CardList /> </Content>} />
+                           <Route path={'/posts/:id'} element={<Content><CardList /> <Post/></Content>} />
+                           <Route path={'*'} element={<h2 style={{textAlign: 'center', color: 'red'}}>Страница не найдена Ошибка 404</h2>}/>
                         </Routes>
-                  </Content>
                </Layout> 
             </BrowserRouter> 
          )}

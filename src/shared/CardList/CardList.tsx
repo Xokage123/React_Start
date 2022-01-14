@@ -3,11 +3,12 @@ import { Card, ICardProps } from './Card';
 import styles from './cardlist.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../store/rootReducer';
-import { usePostsData } from '../../hooks/usePostsData';
 import { postsRequestAsync } from '../store/posts/actions';
-import { generateId, generateRandomString } from '../utils/React/generateRandomIndex';
+
+let cycle = 0
 
 export function CardList() {
+  const [ isButtonVisible, setIsButtonVisible ] = useState(false);
   const bottomOfList = useRef(null);
   const dispatch = useDispatch();
 
@@ -18,11 +19,17 @@ export function CardList() {
   const error = useSelector<RootState, string>(state => state.postsData.error);
 
   useEffect(() => {
-    console.log('hello')
     const observer = new IntersectionObserver((entries) => {
-      if(!token) return
+      if(!token && token == '') return
+      if(cycle > 3) {
+        console.log(`Cycle over ${cycle}`);
+        setIsButtonVisible(true);
+        return
+      } 
       if (entries[0].isIntersecting) {
-       dispatch(postsRequestAsync());
+        dispatch(postsRequestAsync());
+        cycle++
+        console.log(cycle)
       }
     });
     if (bottomOfList.current) {
@@ -44,16 +51,18 @@ export function CardList() {
 
       { postsData.map((item: {[N: string]: any}) => (
       <Card 
-      key={item.id} 
-      id={item.id}
-      username={item.username}
-      title={item.title}
-      score={item.score}
-      num_comments={item.num_comments}
-      thumbnail={item.thumbnail}
-      created={item.created}
+        key={item.id} 
+        id={item.id}
+        username={item.username}
+        title={item.title}
+        score={item.score}
+        num_comments={item.num_comments}
+        thumbnail={item.thumbnail}
+        created={item.created}
       />))}
-        
+
+      { isButtonVisible && <button className={styles.moreButton} onClick={() => {cycle = 0; setIsButtonVisible(false); dispatch(postsRequestAsync());}}>Загрузить ещё</button>}
+
       <div ref={bottomOfList}></div>
        {loading && (
          <div className={styles.status}>Загрузка...</div>

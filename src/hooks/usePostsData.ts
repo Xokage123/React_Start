@@ -10,7 +10,6 @@ export function usePostsData() {
   const token = useSelector<RootState>(state => state.setToken.token);
   const dispatch = useDispatch();
   React.useEffect(() => {
-    if(!token) return
     dispatch(postsRequestAsync());
   }, [token])
   

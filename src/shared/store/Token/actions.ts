@@ -34,7 +34,7 @@ export const tokenRequestError: ActionCreator<tokenRequestError> = (error) => ({
 })
 
 export const tokenRequestSync = (token: string): ThunkAction< void, RootState, unknown, Action<string>> => (dispatch, _getState) => {
-  if(token == 'undefined') return;
+  if(token == 'undefined') return ;
   dispatch(tokenRequest())
   if(token) {
     dispatch(tokenRequestSuccess(token))
