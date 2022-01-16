@@ -1,9 +1,8 @@
 import React from 'react';
 import { Dropdown } from '../../Dropdown';
-import { Feed } from './List';
 import { generateId } from '../../utils/React/generateRandomIndex';
+import { Feed } from './List';
 import styles from './sortblock.scss';
-import { merge } from '../../utils/js/merge';
 
 let LIST = [
   { title: 'Everywhere', class: 'dropItem'},
@@ -30,7 +29,7 @@ export function SortBlock() {
 
   return (
    <Dropdown button={<button className={styles.sortBlock}>{mainButton}</button>}>
-     <Feed blocks={LIST.map(merge({ onClick: handleClick}))}/>
+     <Feed blocks={LIST.map((item) => ({...item, onClick: handleClick}) )}/>
    </Dropdown> 
   );
 }

@@ -1,6 +1,4 @@
 import axios from "axios";
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import { Action, ActionCreator, AnyAction } from "redux";
 import { ThunkAction } from "redux-thunk";
 import { ICardProps } from "../../CardList/Card";

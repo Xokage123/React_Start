@@ -1,10 +1,10 @@
 import { Reducer } from 'redux';
 import { SAVING_AFTER, SAVING_AFTER_ERROR, SAVING_AFTER_SUCCES, SAVING_POSTS, SAVING_POSTS_ERROR, SAVING_POSTS_SUCCES } from './posts/actions';
 import { SAVING_TOKEN, SAVING_TOKEN_ERROR, SAVING_TOKEN_SUCCES } from './token/actions';
-import { tokenReducer, TokenState } from './token/reducer';
 import { afterReducer, AfterState, postsReducer, PostsState } from './posts/reducer'
 import { meReducer, MeState } from './me/reducer';
 import { SAVING_ME, SAVING_ME_ERROR, SAVING_ME_SUCCES } from './me/actions';
+import { tokenReducer, TokenState } from './token/reducer';
 
 export const initialState = {
   setToken: { 
