@@ -1,4 +1,4 @@
-import { Action, ActionCreator, AnyAction } from "redux";
+import { Action, ActionCreator } from "redux";
 import { ThunkAction } from "redux-thunk";
 import { RootState } from "../rootReducer";
 
