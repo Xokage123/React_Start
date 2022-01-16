@@ -8,6 +8,7 @@ export function withKey(key: string) {
     (props: IBlockProps, index: number) => 
     React.createElement(
         component,
+        //@ts-ignore
         { ...props, key: key ? props[key as keyof IBlockProps] : index },
         []
     );

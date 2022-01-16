@@ -14,7 +14,7 @@ function setupDevtool() {
 
 module.exports = {
   resolve: {
-    extensions: ['.js', '.jsx', '.ts','.tsx', 'scss', '.json']
+    extensions: ['.js', '.ts', '.jsx', '.tsx', 'scss', '.json']
   },
   mode: NODE_ENV ? NODE_ENV : 'development',
   entry: path.resolve(__dirname, '../src/client/index.jsx'),

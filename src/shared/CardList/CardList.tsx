@@ -9,7 +9,7 @@ let cycle = 0
 
 export function CardList() {
   const [ isButtonVisible, setIsButtonVisible ] = useState(false);
-  const bottomOfList = useRef(null);
+  const bottomOfList = useRef<HTMLInputElement>(null) as React.MutableRefObject<HTMLInputElement>;
   const dispatch = useDispatch();
 
   const token = useSelector<RootState, string>(state => state.setToken.token)
