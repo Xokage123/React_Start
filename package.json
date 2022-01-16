@@ -2,15 +2,19 @@
   "name": "react_start",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "14.x"
+  },
   "main": "webpack.config.js",
   "bin": {
     "react_start": "dev.js"
   },
   "scripts": {
     "build:dev": "env NODE_ENV=development webpack --config webpack.config.js",
-    "build:prod": "env NODE_ENV=production webpack --config webpack.config.js",
+    "build": "env NODE_ENV=production webpack --config webpack.config.js",
     "dev": "env NODE_ENV=development CLIENT_ID=wPuZkCZI9S4RJ87ZKWwc0w node ./bin/dev.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/server/server.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +27,18 @@
   },
   "homepage": "https://github.com/Regulusarm/React_Start#readme",
   "devDependencies": {
+  },
+  "dependencies": {
+    "@types/react-redux": "^7.1.21",
+    "@types/redux": "^3.6.0",
+    "axios": "^0.24.0",
+    "classnames": "^2.3.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
     "@types/classnames": "^2.3.1",
     "@types/enzyme": "^3.10.10",
     "@types/enzyme-adapter-react-16": "^1.0.6",
@@ -52,17 +68,5 @@
     "webpack-cli": "^3.3.11",
     "webpack-node-externals": "^3.0.0",
     "yup": "^0.32.11"
-  },
-  "dependencies": {
-    "@types/react-redux": "^7.1.21",
-    "@types/redux": "^3.6.0",
-    "axios": "^0.24.0",
-    "classnames": "^2.3.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-redux": "^7.2.6",
-    "redux": "^4.1.2",
-    "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.4.1"
   }
 }
